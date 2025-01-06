@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(92, 150, 150);
+}
+
+.iconbar {
+    background-color: rgb(83, 123, 123);
+    display: flex;
+    font: bold;
+    font-style: italic;
+    font-family:'Courier New', Courier, monospace;
+    justify-content: center;
+    font-size: 2.25rem;
+    padding: 0;
+}
+
+.iconbar2 {
+    background-color: rgb(83, 123, 123);
+    display: flex;
+    font: bold;
+    font-style: italic;
+    font-family:'Courier New', Courier, monospace;
+    justify-content: center;
+    font-size: 1.25rem;
+    padding: 0;
+}
+
+.iconbar2 a{
+    color: rgb(46, 54, 54);
+}
+
+.iconbar2 a:hover{
+    color: aqua;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    padding: 3px 3px;
+    border-radius: 80%;
+}
+
+.icon:hover{
+    background-color: rgb(23, 175, 202);
+    opacity: 0.7;
+    cursor: pointer;
+}
