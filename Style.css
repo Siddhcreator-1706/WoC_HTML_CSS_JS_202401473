@@ -1,47 +1,124 @@
 body{
-    background-color: rgb(92, 150, 150);
+    background-color: rgb(27, 30, 30);
+    color: rgb(173, 176, 176);
+}
+
+.main{
+    background-color: white;
+    color:black;
+    display:flex;
+    justify-content: center;
 }
 
 .iconbar {
-    background-color: rgb(83, 123, 123);
+    background-color: rgb(79, 78, 78);
     display: flex;
-    font: bold;
-    font-style: italic;
-    font-family:'Courier New', Courier, monospace;
-    justify-content: center;
-    font-size: 2.25rem;
+    justify-content: space-between;
     padding: 0;
 }
 
 .iconbar2 {
-    background-color: rgb(83, 123, 123);
     display: flex;
     font: bold;
     font-style: italic;
     font-family:'Courier New', Courier, monospace;
-    justify-content: center;
-    font-size: 1.25rem;
-    padding: 0;
+    font-size: 1.5rem;
+    margin-right: 0;
+    margin-top:8px;
+    margin-bottom:auto;
 }
 
 .iconbar2 a{
-    color: rgb(46, 54, 54);
+    color: rgb(167, 173, 173);
+    font-size: large;
+    text-decoration: none;
+    padding-top:4px;
+    padding-bottom:4px;
+    padding-left:8px;
+    padding-right:8px;
+    border-radius:8px;
 }
 
 .iconbar2 a:hover{
-    color: aqua;
+    color: rgb(255, 255, 255);
+    background-color: rgb(107, 105, 105);
+    border-style:groove;
+    border: 2rem;
+    transition: 0.5s;
+    box-shadow: 2px 2px 8px rgba(255, 253, 253, 0.2);
+    font-size: 1.2rem;
+}
+
+.iconbar2-logout a{
+    display: flex;
+    background-color: rgb(107, 105, 105);
+    font-style: oblique;
+    margin-right: 10px;
+    margin-top: 5.5px;
+    margin-bottom: auto;
+    color: rgb(228, 225, 225);
+    font: bolder;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+    padding-top:4px;
+    padding-bottom:4px;
+    padding-left:8px;
+    padding-right:8px;
+    border-radius:8px;
+    box-shadow: 3px 3px 8px rgba(255, 253, 253, 0.1);
+    text-decoration: none;
+}
+
+.iconbar2-logout a:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(117, 114, 114);
+    border-style:groove;
+    margin-right: 5px; 
+    border: 2rem;
+    transition: 1s;
+    box-shadow: 3px 3px 8px rgba(250, 250, 250, 0.25);
+    font-size: 1.5rem;
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: flex;
-    padding: 3px 3px;
-    border-radius: 80%;
+    margin-left: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px; 
+    padding: 2px 2px;
+    border-radius: 90%;
 }
 
 .icon:hover{
-    background-color: rgb(23, 175, 202);
+    background-color: rgb(231, 238, 238);
     opacity: 0.7;
     cursor: pointer;
+}
+
+.form {
+    border: 1px;
+    display:flex;
+    border-color: black;
+    border-style: solid;
+    height: max-content;
+    width: max-content;
+    margin-top:10%;
+    margin-bottom:10%;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 3%;
+    padding-top: 1%;
+}
+
+.form-content {
+    justify-content: left;
+    padding: auto;
+    margin:auto;
+}
+
+.form-content input{
+    justify-content: center;
 }
