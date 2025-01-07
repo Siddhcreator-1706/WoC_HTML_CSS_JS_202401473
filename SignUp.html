@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images\logo2.jpg">
 </head>
-<body>
-    
+<body class="main">
+    <form action="Login.html" target="_parent" class="form" method="get">
+        <div>
+            <h1 align="center">Sign Up</h1>
+            <div class="form-content">
+                <label for="Username">Username</label><br>
+                <input type="text" placeholder="Enter Your Name" minlength="5" maxlength="50" size="55" required></input>
+            </div>
+            <br>
+            <div class="form-content">
+                <label for="Email">Email</label><br>
+                <input type="email" placeholder="abc@xyz.com" size="55" required></input>
+            </div>
+            <br>
+            <div class="form-content">
+                <label for="Password" id="1">Password</label><br>
+                <input type="password" placeholder="Enter Your Password" size="55" minlength="8" required></input>
+            </div>
+            <br>
+            <div class="form-content" id="2">
+                <label for="Password">Confirm Password</label><br>
+                <input type="password" placeholder="Enter Your Password" size="55" minlength="8" required></input>
+            </div>
+            <br><br>
+            <div align="center" class="form-submit-button">
+                <input type="submit" value="SignUp" >
+            </div>
+            <div class="form-content" align="center">
+                Already have an account? <a href="Login.html">Login</a>
+            </div>
+        </div>
+
+    </form>
 </body>
 </html>

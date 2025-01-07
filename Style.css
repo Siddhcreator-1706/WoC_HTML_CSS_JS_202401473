@@ -1,7 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     background-color: rgb(27, 30, 30);
     color: rgb(173, 176, 176);
-}
+    margin:0;
+    overflow:auto;
+} 
 
 .main{
     background-color: white;
@@ -32,7 +38,7 @@ body{
     color: rgb(167, 173, 173);
     font-size: large;
     text-decoration: none;
-    padding-top:4px;
+    padding-top:6px;
     padding-bottom:4px;
     padding-left:8px;
     padding-right:8px;
@@ -40,13 +46,24 @@ body{
 }
 
 .iconbar2 a:hover{
-    color: rgb(255, 255, 255);
+    color: rgb(231, 231, 231);
     background-color: rgb(107, 105, 105);
     border-style:groove;
     border: 2rem;
     transition: 0.5s;
     box-shadow: 2px 2px 8px rgba(255, 253, 253, 0.2);
     font-size: 1.2rem;
+    padding-top:4px;
+    padding-bottom:2px;
+    padding-left:6px;
+    padding-right:6px;
+}
+
+.iconbar2 a:active{
+    color: rgb(255, 255, 255);
+    background-color: rgb(127, 127, 127);
+    opacity: 0.7;
+    transition: 0.5s;
 }
 
 .iconbar2-logout a{
@@ -56,7 +73,7 @@ body{
     margin-right: 10px;
     margin-top: 5.5px;
     margin-bottom: auto;
-    color: rgb(228, 225, 225);
+    color: rgb(223, 219, 219);
     font: bolder;
     font-family:'Courier New', Courier, monospace;
     font-size: 1.4rem;
@@ -70,10 +87,11 @@ body{
 }
 
 .iconbar2-logout a:hover{
-    color: rgb(255, 255, 255);
+    color: rgb(231, 231, 231);
     background-color: rgb(117, 114, 114);
     border-style:groove;
-    margin-right: 5px; 
+    margin-right: 5px;
+    margin-top:4px; 
     border: 2rem;
     transition: 1s;
     box-shadow: 3px 3px 8px rgba(250, 250, 250, 0.25);
@@ -98,27 +116,95 @@ body{
 }
 
 .form {
-    border: 1px;
+    border: 2px;
     display:flex;
     border-color: black;
-    border-style: solid;
+    border-style: double;
     height: max-content;
     width: max-content;
-    margin-top:10%;
-    margin-bottom:10%;
-    justify-content: center;
+    margin-top:3%;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 3%;
     padding-top: 1%;
+    box-shadow: 6px 6px 16px rgba(83, 82, 82, 0.452);
+    justify-content: center;
 }
 
 .form-content {
-    justify-content: left;
-    padding: auto;
-    margin:auto;
+    padding-top: 10px;
+    font:caption;
+    font-family:monospace;
+    font-size:0.9rem;
+}
+
+.form-content i:hover{
+    opacity:0.7;
+    cursor:pointer;
+}
+
+.form-content label{
+    font-family:'Times New Roman', Times, serif;
+    font-size:1.2rem;
+    font-style:oblique;
+    font:bold;
+}
+
+.form-content a:any-link{
+    color:blue;
+}
+
+.form-content a:hover{
+    color:rgba(53, 53, 246, 0.7)
+}
+
+.form-content a:active{
+    color:rgb(0, 17, 255);
 }
 
 .form-content input{
-    justify-content: center;
+    padding: auto;
+    margin:auto;
+    height:30px;
+}
+
+.form-content input:hover{
+    opacity:0.6;
+}
+
+.form-submit-button input{
+    color: rgb(239, 238, 238);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color:rgb(51, 79, 234);
+    padding:4px 4px;
+    width:400px;
+    font-family: cursive;
+    border-radius:10px;
+    border:none;
+    font-size: 1.25rem;
+}
+
+.form-submit-button input:hover{
+    background-color: rgba(36, 64, 224, 0.8);
+    color:white;
+    transition:0.5s;
+    cursor:pointer;
+    box-shadow: 4px 4px 4px rgba(84, 106, 230, 0.4) ;
+}
+
+.horizontal-row pre{
+    color:rgb(232, 108, 20);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding:0;
+    margin:0.5%;
+    font-size: 1.1rem;
+    
+}
+
+#row{
+    float: left;
+    height: 0.125rem;
+    width:50px;
+    background-color: rgb(232, 108, 20);
+    border:none;
 }
