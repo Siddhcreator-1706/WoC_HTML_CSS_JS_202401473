@@ -6,7 +6,6 @@ body{
     background-color: rgb(27, 30, 30);
     color: rgb(173, 176, 176);
     margin:0;
-    overflow:auto;
 } 
 
 .main{
@@ -21,13 +20,16 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 0;
+    width:100%;
+    position: fixed;
 }
 
 .iconbar2 {
-    display: flex;
+    display:flex;
     font: bold;
     font-style: italic;
     font-family:'Courier New', Courier, monospace;
+    text-align: center;
     font-size: 1.5rem;
     margin-right: 0;
     margin-top:8px;
@@ -61,12 +63,12 @@ body{
 
 .iconbar2 a:active{
     color: rgb(255, 255, 255);
-    background-color: rgb(127, 127, 127);
-    opacity: 0.7;
-    transition: 0.5s;
+    background-color: rgb(92, 92, 92);
+    opacity: 0.4;
 }
 
 .iconbar2-logout a{
+    overflow:auto;
     display: flex;
     background-color: rgb(107, 105, 105);
     font-style: oblique;
@@ -76,6 +78,7 @@ body{
     color: rgb(223, 219, 219);
     font: bolder;
     font-family:'Courier New', Courier, monospace;
+    width:max-content;
     font-size: 1.4rem;
     padding-top:4px;
     padding-bottom:4px;
@@ -93,14 +96,21 @@ body{
     margin-right: 5px;
     margin-top:4px; 
     border: 2rem;
+
     transition: 1s;
     box-shadow: 3px 3px 8px rgba(250, 250, 250, 0.25);
     font-size: 1.5rem;
 }
 
+.iconbar2-logout a:active{
+    color: rgb(255, 255, 255);
+    background-color: rgb(58, 58, 58);
+    opacity: 0.4;
+}
+
 .icon {
     width: 40px;
-    height: 40px;
+    height: 80%;
     display: flex;
     margin-left: 3px;
     margin-top: 3px;
@@ -198,7 +208,6 @@ body{
     padding:0;
     margin:0.5%;
     font-size: 1.1rem;
-    
 }
 
 #row{
@@ -207,4 +216,136 @@ body{
     width:50px;
     background-color: rgb(232, 108, 20);
     border:none;
+}
+
+.main-content{
+    color:White;
+    width:50%;
+    margin:2%;
+    padding-bottom: 0;
+}
+
+.main-content p{
+    font-size: 1rem;
+    font-family: Silkscreen, cursive ,'Times New Roman', Times, serif ;
+    font-style: normal;
+}
+
+#p2{
+    font-size: 1.2rem;
+    color:yellow;
+    font-family: monospace;
+    text-align: left;
+}
+
+#divl{
+    width:100%;
+    text-align: center;
+}
+
+.card{
+    display:flex;
+    color:black;
+    font-style:oblique ;
+    font-family: fantasy;
+    justify-content: space-around;
+    margin-right:  10%;
+    margin-left: 10%;
+    overflow:hidden;
+}
+
+.card-body{
+    background-color:aliceblue;
+    width:15%;
+    height:80px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:5%;
+}
+
+.card-body-in {
+    overflow:clip;
+    height:50%;
+    width:100%;
+    border-radius: 5%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-style:solid;
+    border-left:none;
+    border-right:none;
+    border-color: orange;
+}
+
+.card-body div:hover{
+    background: linear-gradient(to right,rgb(253, 161, 3),rgb(255, 0, 0));
+}
+
+#small-icon {
+    height: 20px;
+    width: 20px;
+    align-items: left;
+}
+
+.tcard{
+    height: 250px;
+    overflow:hidden;
+    width:25%;
+    font-family: Silk-screen,'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1%;
+    border-radius: 15px;
+    background: repeating-linear-gradient(to right,rgb(255, 204, 0),red) ;
+}
+
+.tcard img{
+    height: 100px;
+    max-width: 80%;
+    min-width:70%;
+    border-radius: 80%; 
+}
+
+.footer {
+    background-color: rgb(79, 78, 78);
+    height:350px;
+    padding:5%;
+    width:102%;
+    position:absolute;
+    display:flex;
+    justify-content:space-between;
+    color: aliceblue;
+}
+
+.footer i{
+    color: rgb(186, 182, 182);
+    padding-right: 5px;
+}
+
+.footer h3{
+    color:orange;
+}
+
+.footer a{
+    text-decoration: none;
+    color: aliceblue;
+    padding-bottom:5px;
+}
+
+.footer img{
+    height:40%;
+    width:40%;
+    display:flex;
+    position: relative;
+    left:30%;
+    top:5%;
+}
+
+#foot1{
+    align-content: center;
+    justify-content: center;
+    width: 25%;
 }
