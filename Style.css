@@ -8,6 +8,19 @@ body{
     margin:0;
 } 
 
+main {
+    padding-top: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+    .horizontal-row{
+        display:none;
+    }
+    .iconbar{
+        display:none;
+    }
+}
+
 .main{
     background-color: white;
     color:black;
@@ -18,27 +31,31 @@ body{
 .iconbar {
     background-color: rgb(79, 78, 78);
     display: flex;
-    justify-content: space-between;
     padding: 0;
+    padding-bottom: 4px;
     width:100%;
-    position: fixed;
+    position:fixed;
+    align-items: center;
+    justify-content: space-between;
+    z-index:1;
 }
 
-.iconbar2 {
+.iconbar ul{
     display:flex;
-    font: bold;
+    flex-direction: row;
+    column-gap: 15px;
+    list-style-type: none;
     font-style: italic;
     font-family:'Courier New', Courier, monospace;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-right: 0;
+    padding: 0;
+    font-size: 1.3rem;
     margin-top:8px;
     margin-bottom:auto;
 }
 
-.iconbar2 a{
+.iconbar ul a{
     color: rgb(167, 173, 173);
-    font-size: large;
+    display:block;
     text-decoration: none;
     padding-top:6px;
     padding-bottom:4px;
@@ -47,62 +64,54 @@ body{
     border-radius:8px;
 }
 
-.iconbar2 a:hover{
+.iconbar ul a:hover{
     color: rgb(231, 231, 231);
     background-color: rgb(107, 105, 105);
-    border-style:groove;
-    border: 2rem;
     transition: 0.5s;
-    box-shadow: 2px 2px 8px rgba(255, 253, 253, 0.2);
-    font-size: 1.2rem;
+    box-shadow: 2px 2px 12px rgba(255, 253, 253, 0.2);
+    font-size: 1.3rem;
     padding-top:4px;
     padding-bottom:2px;
     padding-left:6px;
     padding-right:6px;
 }
 
-.iconbar2 a:active{
+.iconbar a:active{
     color: rgb(255, 255, 255);
     background-color: rgb(92, 92, 92);
     opacity: 0.4;
 }
 
-.iconbar2-logout a{
-    overflow:auto;
+.iconbar-logout {
     display: flex;
-    background-color: rgb(107, 105, 105);
     font-style: oblique;
-    margin-right: 10px;
-    margin-top: 5.5px;
-    margin-bottom: auto;
-    color: rgb(223, 219, 219);
-    font: bolder;
     font-family:'Courier New', Courier, monospace;
     width:max-content;
+    margin-right: 8px;
+    border-radius:8px;
+    box-shadow: 3px 3px 12px rgba(255, 253, 253, 0.2);
+    background-color: rgb(107, 105, 105);
+}
+
+.iconbar-logout a{
+    border-radius:8px;
     font-size: 1.4rem;
     padding-top:4px;
     padding-bottom:4px;
     padding-left:8px;
     padding-right:8px;
-    border-radius:8px;
-    box-shadow: 3px 3px 8px rgba(255, 253, 253, 0.1);
     text-decoration: none;
+    color: rgb(223, 219, 219);
 }
 
-.iconbar2-logout a:hover{
+.iconbar-logout a:hover{
     color: rgb(231, 231, 231);
-    background-color: rgb(117, 114, 114);
-    border-style:groove;
-    margin-right: 5px;
-    margin-top:4px; 
-    border: 2rem;
-
-    transition: 1s;
-    box-shadow: 3px 3px 8px rgba(250, 250, 250, 0.25);
-    font-size: 1.5rem;
+    transition: 0.7s;
+    box-shadow: 3px 3px 11px rgba(250, 250, 250, 0.3);
+    font-size: 1.45rem;
 }
 
-.iconbar2-logout a:active{
+.iconbar-logout a:active{
     color: rgb(255, 255, 255);
     background-color: rgb(58, 58, 58);
     opacity: 0.4;
@@ -120,8 +129,8 @@ body{
 }
 
 .icon:hover{
-    background-color: rgb(231, 238, 238);
-    opacity: 0.7;
+    background-color: rgb(159, 160, 160);
+    opacity: 0.5;
     cursor: pointer;
 }
 
@@ -129,7 +138,8 @@ body{
     border: 2px;
     display:flex;
     border-color: black;
-    border-style: double;
+    border-style:outset;
+    border-radius:2.5%;
     height: max-content;
     width: max-content;
     margin-top:3%;
@@ -137,7 +147,7 @@ body{
     padding-right: 20px;
     padding-bottom: 3%;
     padding-top: 1%;
-    box-shadow: 6px 6px 16px rgba(83, 82, 82, 0.452);
+    box-shadow: 6px 6px 16px rgba(83, 82, 82, 0.5);
     justify-content: center;
 }
 
@@ -220,8 +230,7 @@ body{
 
 .main-content{
     color:White;
-    width:50%;
-    margin:2%;
+    padding:2%;
     padding-bottom: 0;
 }
 
@@ -241,6 +250,8 @@ body{
 #divl{
     width:100%;
     text-align: center;
+    align-items: center;
+    padding: 0;
 }
 
 .card{
@@ -248,10 +259,8 @@ body{
     color:black;
     font-style:oblique ;
     font-family: fantasy;
-    justify-content: space-around;
-    margin-right:  10%;
-    margin-left: 10%;
-    overflow:hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-body{
@@ -261,7 +270,8 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
-    border-radius:5%;
+    margin-left:5%;
+    border-radius:5px;
 }
 
 .card-body-in {
@@ -285,19 +295,23 @@ body{
 #small-icon {
     height: 20px;
     width: 20px;
-    align-items: left;
+}
+
+#small-icon :hover{
+    cursor:none;
 }
 
 .tcard{
     height: 250px;
     overflow:hidden;
-    width:25%;
+    width:15%;
     font-family: Silk-screen,'Times New Roman', Times, serif;
     font-size: 1.5rem;
     font-display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 1%;
+    margin-right: 5%;
     border-radius: 15px;
     background: repeating-linear-gradient(to right,rgb(255, 204, 0),red) ;
 }
@@ -309,11 +323,17 @@ body{
     border-radius: 80%; 
 }
 
+#Prof div:hover {
+    transform: translateY(-10px);
+    cursor:pointer;
+}
+
 .footer {
     background-color: rgb(79, 78, 78);
     height:350px;
-    padding:5%;
-    width:102%;
+    padding-left:5%;
+    padding-right: 5%;
+    width:100%;
     position:absolute;
     display:flex;
     justify-content:space-between;
@@ -338,14 +358,485 @@ body{
 .footer img{
     height:40%;
     width:40%;
+    border-radius: 80%;
     display:flex;
     position: relative;
+    align-items: center;
+    justify-content:center;
     left:30%;
     top:5%;
+    mix-blend-mode:darken;
 }
 
 #foot1{
     align-content: center;
-    justify-content: center;
     width: 25%;
+}
+
+.image{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    float:right;
+    row-gap:10%;
+    width: 50%;
+}
+
+.image img{
+    height: 60%;
+    width: 60%;     
+    border-radius: 90%;
+}
+
+.progress-bar {
+    /* background-color: aqua; */
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    column-gap: 3%;
+    color:rgb(171, 127, 127);
+}
+
+.circle-in{
+    background-color: rgb(27, 30, 30);
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    height: 70px;
+    width:70px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:larger;
+    border-radius: 80%;
+}
+
+.circle-out{
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    height: 80px;
+    width:80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80%;
+    animation: progress 3s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes progress {
+    0% {
+        background-color: blue;
+    }
+    100%{
+        background-color: red;
+    }
+}
+
+#main1 {
+    display:flex;
+}
+
+.About{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:40vh;
+    background-image: linear-gradient(rgb(27, 30, 30 ,0.8), rgb(27, 30, 30 ,0.8)), url('images/AboutUs.jpg');
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    background-size: cover;
+    image-resolution: 100%;
+    color: rgb(255, 255, 255);
+}
+
+.About h1{
+    font-size: 3em;
+    font-family: AudioWide,'Times New Roman', Times, serif;
+    text-shadow: 5px 0px 5px rgb(0, 0, 0),0px 5px 15px rgb(74, 72, 72),-5px 0px 5px rgb(0, 0, 0),0px -5px 15px rgb(62, 60, 60);
+}
+
+.About-content {
+    display:grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+    margin-top: 5%;
+    padding-right: 4%;
+    padding-left: 2%
+}
+
+.About-content span{
+    justify-items:left ;
+}
+
+.About-content p{
+    font-size:0.9em;
+    font-family: Silkscreen,'Times New Roman', Times, serif;
+}
+
+.About-content b{
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px rgb(234, 162, 162);
+}
+
+.About-content h1{
+    font-size:1.85em;
+    color: aliceblue;
+    text-shadow: 2px -2px 10px rgb(255, 255, 255);
+    font-family: Cursive,'Times New Roman', Times, serif;
+}
+
+
+.About-content h2{
+    font-size:1.55em;
+    color: rgb(255, 255, 255);
+    font-family: Cursive,'Times New Roman', Times, serif;
+}
+
+#Quote{
+    font-size: 1em;
+    font-family: monospace;
+}
+
+.Learn {
+    align-items: center;
+    padding: left 5%;
+    padding:2%;
+    width: max-content;
+    background:linear-gradient(rgb(117, 117, 117),rgb(172, 171, 171));
+    color:Black;
+    text-shadow: 0px 0px 2px black;
+    border-radius: 10px;
+    border:none;
+}
+
+#dec-no{
+    text-decoration: none;
+}
+
+.Learn:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+}
+
+.image2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image2 img{
+    object-fit:cover;
+    width: 80%;
+    height:70%;
+    border-radius:80%;
+}
+
+#more {
+    display:none;
+}
+
+#more:target {
+    display: block;
+}
+
+
+.last-about {
+    display:flex;
+    border-color: rgb(36, 35, 35);
+    height: 25%;
+    align-items: center;
+    background-color: rgb(51, 50, 50);
+    padding-left: 2%;
+    box-shadow: 2px 2px 10px rgb(85, 84, 84);
+}
+
+.last-about i{
+    color:rgb(245, 223, 181);
+    padding:5%;
+    float:left;
+}
+
+.image3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image3 img{
+    display:flex;
+    object-fit: cover;
+    height:80%; 
+    width:80%;
+    padding:7%;
+    border-radius: 80%;
+    background:radial-gradient(circle,rgb(62, 62, 62) 40%,rgb(27, 30, 30) 70%);
+}
+
+.drop-down a:hover{
+    color:rgb(0, 0, 0);
+}
+
+.Drop:hover .drop-down{
+    display:block;
+    background-color: rgb(255, 255, 255);
+    font-size: 0.8em;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    width:105px;
+    padding-left: 5px ;
+    padding-right: 5px;
+    border-radius: 3%;
+}
+
+.drop-down a:any-link{
+    color:rgb(0, 0, 0); 
+    border-color:rgba(0, 0, 0, 0.066) ;
+    border-style: groove;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow:2px 2px 10px rgba(6, 6, 6, 0.525);
+}
+
+.drop-down{
+    display:none;
+    padding:1%;
+}
+
+.Courses {
+    display:grid;
+    justify-content: center;
+    grid-template-columns: 28% 28% 28%;
+    grid-template-rows: 250px 250px;
+    padding: 2%;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.Courses > div{
+    background-color: rgb(236, 239, 241);
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+.Courses button:hover{
+    transform: scale(1.05);
+    display:flex;
+}
+
+#title {
+    font-size:1.85em;
+    color: rgb(228, 233, 238);
+    text-shadow: 2px -2px 8px rgba(255, 255, 255,0.8);
+    font-family: Cursive,'Times New Roman', Times, serif;
+}
+
+.Enroll {
+    text-decoration: none;
+    display:flex;
+}
+
+.Enroll button{
+    background-color: rgb(236, 34, 34);
+    border-radius: 5px;
+    color:rgb(252, 229, 229);
+    padding:15%;
+}
+
+.Enroll button:hover {
+    transform: scale(1.1);
+    background-color: rgb(236, 34, 34);
+    border-radius: 5px;
+    padding:15%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#Enrolling {
+    display:none;
+}
+
+#Enrolling:target {
+    display:flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.Enrolled button{
+    color:rgb(1, 1, 1);
+    background-color: rgb(44, 216, 21);
+    border-radius: 5px;
+    padding:8%;
+    display:flex;
+    text-decoration: none;
+}
+
+.Enrolled {
+    text-decoration: none;
+}
+
+.OpenCourse {
+    text-decoration: none;
+}
+
+.OpenCourse button{
+    color:rgb(255, 255, 255);
+    background-color: rgb(253, 4, 4);
+    border-radius: 5px;
+    padding:0.02%;
+    display:flex;
+    text-decoration: none;
+}
+
+.Review {
+    background-image: linear-gradient(rgba(27, 24, 55, 0.85), rgba(34, 28, 60, 0.85)), url(images/office.jpg);
+    height:500px;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    display: flex;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.Review img{
+    height:10%;
+    width:10%;
+    border-radius: 80%;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    mix-blend-mode: screen;
+}
+
+.Review div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    padding-top: 5%;
+}
+
+.Review i{
+    color:yellow;
+}
+
+#Review-form {
+    display: flex;
+    color:orange;
+    padding:5%;
+}
+
+#Review-button button{
+    color:white;
+    background-color: red;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:10px;
+    font-size: 1.1em;
+}
+
+#Review-button a{
+    text-decoration: none;
+}
+
+#Review-button :hover {
+    transform:scale(1.1);
+    cursor: pointer;
+    background-color:chocolate;
+}
+
+#Review-button :active{
+    background-color: rgb(134, 101, 13);
+}
+
+.Review-form {
+    padding:2%;
+    color:White;
+}
+
+.Review-form input{
+    width:100%;
+}
+
+.Review-form select{
+    width: 100%;
+}
+
+#Reviewing-form {
+    display:none;
+}
+
+#Reviewing-form:target {
+    display:block;
+}
+
+.Enquiry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%; 
+    color:white;
+    margin-bottom: 5%;
+}
+
+.Enquiry p{
+    text-align: center;
+}
+
+.Enquiry form{
+    display: flex;
+    border-style: double;
+    padding:5%;
+    background-color:rgb(211, 208, 208) ;
+    color: black;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    row-gap: 10px;
+}
+
+.Enquiry form div div{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+}
+
+.Enquiry form div{
+    row-gap: 10px;
+    column-gap: 10px;
+    display: flex;
+}
+
+.Enquiry form input{
+    width: 100%;
+}
+
+.Enquiry button{
+    background-color: red;
+    color: aliceblue;
+    padding:1%;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.Enquiry button:hover{
+    background-color: rgb(215, 9, 9);
+    color: rgb(253, 231, 231);
+}
+
+.Enquiry button:active{
+    background-color: rgb(234, 88, 88);
+    color: black;
 }

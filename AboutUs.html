@@ -1,41 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shah Academy</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images\logo2.jpg">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shah Academy</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images\logo2.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
 <body>
-    <!-- <img src="images\logo2.jpg" class="icon" alt="Shah Academy" usemap="#home-map" color="blue"> -->
-    <!-- <map name="home-map">
-        <area shape="rec" target="_parent" title="Home" href="Home.html" alt="Home_Page" coords="0,0,30,30">
-    </map> 
-    box-shadow
-    -->
-    <div class="iconbar">
+    <nav class="iconbar">
         <a href="Home.html" target="_parent">
             <img src="images\logo2.jpg" class="icon" alt="Shah Academy">
         </a>
-        <div class="iconbar2">
-            <a href="Home.html">Home</a>
+        <ul>
+            <li id="trial">
+                <a href="Home.html">Home</a>
+            </li>
+            <li>
+                <a href="AboutUs.html">About Us</a>
+            </li>
+            <li>
+                <div class="Drop">
+                    <div><a href="Courses.html">Courses</a></div>
+                    <div class="drop-down">
+                      <a href="Courses.html">TALLY</a>
+                      <a href="Courses.html">SAGE</a>
+                      <a href="Courses.html">MYOB</a>
+                    </div>
+                  </div>
+            </li>
+            <li>
+                <a href="Review.html">Review</a>
+            </li>
+            <li>
+                <a href="Enquiry.html">Enquiry Us</a>
+            </li>
+        </ul>
+        <span class="iconbar-logout">
+                <a href="Login.html">Logout</a>
+        </span>
+    </nav>
+
+    <main>
+        <div class="About">
+            <h1>About Us</h1>
         </div>
-        <div class="iconbar2">
-            <a href="AboutUs.html">About Us</a>
+
+        <section class="About-content">
+            <div class="image2">
+                <img src="images\class.jpg" alt="class"></img>
+            </div>
+            
+            <div>
+                <span class="horizontal-row">
+                    <hr id="row">
+                    <pre>  About Company
+                    </pre>
+                </span>
+                <h1>
+                    Welcome to Shah Academy
+                </h1>
+                <p>
+                    Shah Academy was incorparated in 1994, driven by a shared purpose of filling out gap of Education and helping students launch their growth-focused careers.<b>Shah Academy</b> has been a pioneer in providing advance courses for computer science and technology. Our mission is to provide quality education to students and help them achieve their goals.Professional training in <b> TALLY Prime, MyOB, QuickBook, Xero, Sage accounting</b> software applicable in <b>INDIA, USA, CANADA, UK & AUTRAILIA & many more.</b>
+                </p>
+                <p>
+                    We also provide Digital marketing industry-lead certificate that thrives in the digital realm. For students or proffesionals, we offer <b>Digital Marketing courses</b> cutomized to meet learning goals. In addition, wee provide Digital Marketing courses with certificaions led by industry experts.
+                </p>
+                <a href="#more" id="dec-no"><button class="Learn" onclick="this.style.display='none'">Learn More <i class="fa-solid fa-arrow-right"></i>
+                </button></a>
+                <p id="more">
+                    Our mission is to provide quality education that inspires students to achieve their personal and professional goals. We strive to foster an innovative learning environment that nurtures talent, promotes critical thinking, and encourages lifelong learning.
+                </p>
+            </div>
+            <br><br>
+
+        </section>
+
+        <section class="About-content">
+            <div>
+                <span class="horizontal-row">
+                    <hr id="row">
+                    <pre>  Special batches
+                    </pre>
+                </span>
+                <h2>Online Learning</h2>
+                <p id="Quote">"No matter where you stay... You can learn our courses sitting at your Home"</p>
+                <p ID="Quote">
+                    SPECIAL BATCHES FOR USA | CANADA | AUSTRAILIA | NEW ZEALAND | UK
+                </p>
+                <div class="last-about">
+                    <i class="fa-solid fa-film fa-2xl"></i>
+                    <div>
+                    <h3>
+                        Details Video tutorial
+                    </h3>
+                    <p>
+                        Have interactive session
+                    </p>   
+                    </div>
+                </div><br>
+                <div class="last-about">
+                    <i class="fa-solid fa-film fa-2xl"></i>
+                    <div>
+                        <h3>
+                            World Class Support
+                        </h3>
+                        <p>
+                            Support after course completion as well
+                        </p>   
+                        </div>
+                </div><br>
+                <div class="iconbar-logout"><a href="Courses.html"><tab>Our courses <i class="fa-solid fa-arrow-right"></i></tab></a></div>
+            </div>
+
+            <div class="image3">
+                <img src="images/Comp-teach.jpg" ></img>
+            </div>
+            
+        </section>
+    </main>
+    <br><br><br>
+
+    <footer class="footer">
+        <div id="foot1">
+            <img src="images/logo2.jpg"></img>
+            <h4 align="center">Shah Academy</h4>
+            <h3>Follow Us</h3>
+            <div align="left">
+                <i class="fa-brands fa-facebook" style="color:rgb(83, 83, 247)"></i> 
+                <i class="fa-brands fa-twitter" style="color:aqua"></i> 
+                <i class="fa-brands fa-whatsapp" style="color:rgb(3, 209, 3)"></i> 
+                <i class="fa-brands fa-youtube" style="color:red;"></i>
+            </div>
         </div>
-        <div class="iconbar2">
-            <a href="Courses.html">Courses</a>
+        <div>
+            <h3>Quick Links</h3>
+            <div>
+                <a href="Home.html">Home</a>
+            </div>
+            <div>
+                <a href="AboutUs.html">About Us</a>
+            </div>
+            <div>
+                <a href="Courses.html">Courses</a>
+            </div>
+            <div>
+                <a href="Review.html">Review</a>
+            </div>
+            <div>
+                <a href="Enquiry.html">Enquiry Us</a>
+            </div>
         </div>
-        <div class="iconbar2">
-            <a href="Review.html">Review</a>
+        <div>
+            <h3>Contact Us</h3>
+            <div>
+                Email-Id : shahsiddhb@gmail.com
+            </div>
+            <div>
+                Contact : 9586629207
+            </div>
+            <div>
+                Address : 123, ABC Road, XYZ City
+            </div>
         </div>
-        <div class="iconbar2">
-            <a href="Enquiry.html">Enquiry Us</a>
-        </div>
-        <div class="iconbar2-logout">
-            <a href="Login.html">Logout</a>
-        </div>
-    </div>
+    </footer>
+    
 </body>
 </html>
