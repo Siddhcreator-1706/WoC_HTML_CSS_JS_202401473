@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shah Academy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Home.css">
     <link rel="icon" href="images\logo2.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="javascript.js" defer></script>
+    <script src="Home.js" defer></script>
 </head>
 
 <body>
@@ -19,7 +28,7 @@
             <img src="images\logo2.jpg" class="icon" alt="Shah Academy">
         </a>
         <ul>
-            <li id="trial">
+            <li>
                 <a href="Home.html">Home</a>
             </li>
             <li>
@@ -29,11 +38,12 @@
                 <div class="Drop">
                     <div><a href="Courses.html">Courses</a></div>
                     <div class="drop-down">
-                      <a href="Courses.html">TALLY</a>
-                      <a href="Courses.html">SAGE</a>
-                      <a href="Courses.html">MYOB</a>
+                        <button onclick="goto('Tally')">TALLY</button>
+                        <button onclick="goto('Content Writing')">Content Writing</button>
+                        <button onclick="goto('SAGE')">SAGE</button>
+                        <button onclick="goto('App Development')">App Development</button>
                     </div>
-                  </div>
+                </div>
             </li>
             <li>
                 <a href="Review.html">Review</a>
@@ -43,107 +53,396 @@
             </li>
         </ul>
         <span class="iconbar-logout">
-                <a href="Login.html">Logout</a>
+            <button onclick="clearData()"><a href="Login.html">Logout</a></button>
         </span>
-    </nav><br><br><br>
+    </nav>
 
-    <div class="horizontal-row">
-        <hr id="row">
-        <pre>  **Live Project Training**</pre>
-    </div>
-
-    <div class="main-content" id="main1">
-        <div style="width:50%;"><h1 style="font-family: audiowide,'Times New Roman', Times, serif;">Various Computer<br>Courses</h1>
-        <p>
-            We, SHAH ACADEMY located at Ahmedabad is one of the leading Computer
-            training institutes since 1990, offering a wide range of courses. The
-            overall training structure is designed to meet the needs of the industries.
-            Our designated faculties is always readily available to help students with 
-            comprehensive knowledge in Computer, along with latest technology in market. 
-        </p>
-        <p id="p2">USA | CANADA | AUSTRALIA | NEW ZEALAND | U.K. 
-        </p>
-        <span class="iconbar-logout"><a href="Courses.html"><tab>Our courses <i class="fa-solid fa-arrow-right"></i></tab></a></span>
+    <main>
+        <div class="horizontal-row">
+            <hr id="row">
+            <pre>  **Live Project Training**</pre>
         </div>
-        <div class="image">
-            <img src="images/dynamic1.jpg" alt="Shah Academy" ></img>
-            <div class="progress-bar">
-                <div class="circle-out">
-                    <div class="circle-in">
-                        1000+
+
+        <div class="home-content" id="home1">
+            <div style="width:80%;" data-aos="fade-left" data-aos-duration="2000">
+                <h1 style="font-family: audiowide,'Times New Roman', Times, serif;">Welcome to SHAH Academy</h1>
+                <h3>— Your Gateway to Professional Computer Training</h3>
+                <p>
+                    Established in 1990, SHAH ACADEMY has been a trusted name in computer education for over three
+                    decades.
+                    Based in Ahmedabad, we are proud to be one of the leading computer training institutes in the
+                    region,
+                    with a growing presence online.<br><br>
+
+                    We offer a wide spectrum of industry-relevant courses designed to equip students with both
+                    foundational
+                    knowledge and the latest technological skills in demand today. Whether you're a beginner or a
+                    professional looking to upskill, our curriculum is tailored to meet your goals.<br><br>
+
+                    Our dedicated and experienced faculty are committed to delivering hands-on, practical training that
+                    bridges the gap between education and real-world applications. With a strong emphasis on quality,
+                    personalized guidance, and up-to-date tools, we ensure our students are career-ready.<br><br>
+
+                <h3>Join SHAH Academy and take the next step toward your success — one skill at a time.</h3>
+                </p>
+                <p id="p2">USA | CANADA | AUSTRALIA | NEW ZEALAND | U.K. | U.A.E. | SINGAPORE | MALAYSIA | SOUTH AFRICA
+                    |
+                    AUATRAILIA
+                </p>
+                <span class="iconbar-logout"><a href="Courses.html">
+                        <tab>Our courses <i class="fa-solid fa-arrow-right"></i></tab>
+                    </a></span>
+            </div>
+            <div class="image" data-aos="zoom-in" data-aos-duration="1800">
+                <img id="dynamicImage" src="images/dynamic1.jpg" alt="Shah Academy"></img>
+                <div style="display:flex;column-gap: 5%;">
+                    <div class="progress-container" onload="progresssBarTeach()">
+                        <div class="progress-ring" id="progressRing">
+                            <div class="progress-inner">
+                                <span id="progressValue">0</span>
+                            </div>
+                        </div>
+                        <h3>Students<br>Taught</h3>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-ring" id="progressRing2">
+                            <div class="progress-inner">
+                                <span id="progressValue2">0</span>
+                            </div>
+                        </div>
+                        <h3>Students<br>Placed</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="home-content" id="divl" data-aos="zoom-in-up" data-aos-duration="1800">
+            <h3>Hot Picks at Shah Academy</h3>
+            <div class="card">
+                <div class="card-body">
+                    <a href="Courses.html" onclick="localStorage.setItem('searchQuery', 'Python Programming');">
+                        <div class="card-body-in">
+                            <img id="small-icon" src="images/python.png" alt="Python" class="icon"></img>
+                            Python Programming
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="Courses.html" onclick="localStorage.setItem('searchQuery', 'Mobile App Development');">
+                        <div class="card-body-in">
+                            <img id="small-icon" src="images/mobile.png" alt="Mobile Development" class="icon"></img>
+                            Mobile App Development
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="Courses.html" onclick="localStorage.setItem('searchQuery', 'Cybersecurity Essentials');">
+                        <div class="card-body-in">
+                            <img id="small-icon" src="images/cyber.png" alt="Cybersecurity" class="icon"></img>
+                            Cybersecurity Essentials
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="Courses.html" onclick="localStorage.setItem('searchQuery', 'Cloud Computing');">
+                        <div class="card-body-in">
+                            <img id="small-icon" src="images/cloud.png" alt="Cloud Computing" class="icon"></img>
+                            Cloud Computing
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="Courses.html" onclick="localStorage.setItem('searchQuery', 'Artificial Intelligence');">
+                        <div class="card-body-in">
+                            <img id="small-icon" src="images/ai.png" alt="AI" class="icon"></img>
+                            Artificial Intelligence
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="Courses.html" onclick="localStorage.setItem('searchQuery', 'Blockchain Technology');">
+                        <div class="card-body-in">
+                            <img id="small-icon" src="images/blockchain.png" alt="Blockchain" class="icon"></img>
+                            Blockchain Technology
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="Courses.html" onclick="localStorage.setItem('searchQuery', 'UI/UX Design');">
+                        <div class="card-body-in">
+                            <img id="small-icon" src="images/uiux.png" alt="UI/UX" class="icon"></img>
+                            UI/UX Design
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="Courses.html" onclick="localStorage.setItem('searchQuery', 'MYOB');">
+                        <div class="card-body-in">
+                            <img id="small-icon" src="images/m.png" alt="Myob" class="icon"></img>
+                            MYOB
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="Courses.html" onclick="localStorage.setItem('searchQuery', 'Digital Marketing');">
+                        <div class="card-body-in">
+                            <img id="small-icon" src="images/dm.png" alt="Digital Marketing" class="icon"></img>
+                            Digital Marketing
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="Courses.html" onclick="localStorage.setItem('searchQuery', 'XERO');">
+                        <div class="card-body-in">
+                            <img id="small-icon" src="images/x.png" alt="Xero" class="icon"></img>
+                            XERO
+                        </div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="Courses.html" onclick="localStorage.setItem('searchQuery', 'Tally');">
+                        <div class="card-body-in">
+                            <img id="small-icon" src="images/t.png" alt="Tally" class="icon"></img>
+                            Tally
+                        </div>
+                    </a>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="horizontal-row" data-aos="fade" data-aos-duration="2000">
+            <hr id="row">
+            <pre> BEST EXPERT TRAINER</pre>
+        </div>
+
+        <div class="home-content" id="divl" data-aos="flip-down" data-aos-duration="2000">
+            <div>
+                <div>
+                    <h2>Our Proffessional Teachers</h2>
+                </div>
+                <div class="card">
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/1.png" alt="Dr. Raj Mehta">
+                            <b style="color:rgb(255, 255, 255)">Dr. Raj Mehta</b><br>
+                            Experience: 10 Years<br>
+                            MYOB Expert
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/1.png" alt="Dr. Raj Mehta">
+                            <b style="color:rgb(255, 255, 255)">Dr. Raj Mehta</b><br>
+                            Office Hours: Mon-Wed 10AM-4PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/2.png" alt="Ratna Bharti">
+                            <b style="color:rgb(255, 255, 255)">Ratna Bharti</b><br>
+                            Experience: 8 Years<br>
+                            XERO Specialist
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/2.png" alt="Ratna Bharti">
+                            <b style="color:rgb(255, 255, 255)">Ratna Bharti</b><br>
+                            Office Hours: Tue-Thu 11AM-3PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/3.png" alt="Darshan Bhatt">
+                            <b style="color:rgb(255, 255, 255)">Darshan Bhatt</b><br>
+                            Experience: 7 Years<br>
+                            Tally Guru
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/3.png" alt="Darshan Bhatt">
+                            <b style="color:rgb(255, 255, 255)">Darshan Bhatt</b><br>
+                            Office Hours: Mon-Fri 9AM-5PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/4.png" alt="Dr. Tanish Sanghvi">
+                            <b style="color:rgb(255, 255, 255)">Dr. Tanish Sanghvi</b><br>
+                            Experience: 10 Years<br>
+                            Digital Marketing Pro
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/4.png" alt="Dr. Tanish Sanghvi">
+                            <b style="color:rgb(255, 255, 255)">Dr. Tanish Sanghvi</b><br>
+                            Office Hours: Wed-Fri 10AM-2PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/5.png" alt="Rajendra Shah">
+                            <b style="color:rgb(255, 255, 255)">Rajendra Shah</b><br>
+                            Experience: 15 Years<br>
+                            Python Maestro
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/5.png" alt="Rajendra Shah">
+                            <b style="color:rgb(255, 255, 255)">Rajendra Shah</b><br>
+                            Office Hours: Mon-Thu 1PM-5PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/6.png" alt="Kavita Parekh">
+                            <b style="color:rgb(255, 255, 255)">Kavita Parekh</b><br>
+                            Experience: 9 Years<br>
+                            Data Science Wizard
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/6.png" alt="Kavita Parekh">
+                            <b style="color:rgb(255, 255, 255)">Kavita Parekh</b><br>
+                            Office Hours: Tue-Fri 10AM-4PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/7.png" alt="Marm Bhatt">
+                            <b style="color:rgb(255, 255, 255)">Marm Bhatt</b><br>
+                            Experience: 13 Years<br>
+                            Web Dev Expert
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/7.png" alt="Marm Bhatt">
+                            <b style="color:rgb(255, 255, 255)">Marm Bhatt</b><br>
+                            Office Hours: Mon-Wed 2PM-6PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/8.png" alt="Neha Desai">
+                            <b style="color:rgb(255, 255, 255)">Neha Desai</b><br>
+                            Experience: 6 Years<br>
+                            UI/UX Designer
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/8.png" alt="Neha Desai">
+                            <b style="color:rgb(255, 255, 255)">Neha Desai</b><br>
+                            Office Hours: Thu-Sat 12PM-4PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/9.png" alt="Dr. Arjun Patel">
+                            <b style="color:rgb(255, 255, 255)">Dr. Arjun Patel</b><br>
+                            Experience: 12 Years<br>
+                            Cybersecurity Specialist
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/9.png" alt="Dr. Arjun Patel">
+                            <b style="color:rgb(255, 255, 255)">Dr. Arjun Patel</b><br>
+                            Office Hours: Mon-Fri 3PM-7PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/10.png" alt="Priya Sharma">
+                            <b style="color:rgb(255, 255, 255)">Priya Sharma</b><br>
+                            Experience: 8 Years<br>
+                            Mobile App Developer
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/10.png" alt="Priya Sharma">
+                            <b style="color:rgb(255, 255, 255)">Priya Sharma</b><br>
+                            Office Hours: Tue-Thu 9AM-1PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/11.png" alt="Vikram Joshi">
+                            <b style="color:rgb(255, 255, 255)">Vikram Joshi</b><br>
+                            Experience: 11 Years<br>
+                            Cloud Architect
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/11.png" alt="Vikram Joshi">
+                            <b style="color:rgb(255, 255, 255)">Vikram Joshi</b><br>
+                            Office Hours: Wed-Sat 10AM-2PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/12.png" alt="Dr. Amit Verma">
+                            <b style="color:rgb(255, 255, 255)">Dr. Amit Verma</b><br>
+                            Experience: 14 Years<br>
+                            AI Researcher
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/12.png" alt="Dr. Amit Verma">
+                            <b style="color:rgb(255, 255, 255)">Dr. Amit Verma</b><br>
+                            Office Hours: Mon-Wed-Fri 11AM-3PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/13.png" alt="Ananya Reddy">
+                            <b style="color:rgb(255, 255, 255)">Ananya Reddy</b><br>
+                            Experience: 5 Years<br>
+                            Content Strategist
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/13.png" alt="Ananya Reddy">
+                            <b style="color:rgb(255, 255, 255)">Ananya Reddy</b><br>
+                            Office Hours: Tue-Thu 2PM-6PM
+                        </div>
+                    </div>
+
+                    <div class="flipper">
+                        <div class="tcard tcard-front">
+                            <img src="images/14.png" alt="Rohan Malhotra">
+                            <b style="color:rgb(255, 255, 255)">Rohan Malhotra</b><br>
+                            Experience: 7 Years<br>
+                            Video Editing Expert
+                        </div>
+                        <div class="tcard tcard-back">
+                            <img src="images/14.png" alt="Rohan Malhotra">
+                            <b style="color:rgb(255, 255, 255)">Rohan Malhotra</b><br>
+                            Office Hours: Mon-Tue-Wed 1PM-5PM
+                        </div>
                     </div>
                 </div>
-                <h3>Students<br>taught</h3>
             </div>
-        </div>
-        <!-- <img src="images/dynamic2.jpg" alt="Shah Academy"> -->
-    </div>
+        </div><br><br>
 
-    <div class="main-content" id="divl">
-        <h3>Popular Subjects on Newtech Computer</h3>
-        <div class="card">
-            <div class="card-body">
-                <div class="card-body-in">
-                    <img id="small-icon" src="images\M.png" alt="Myob" class="icon"></img>
-                    <a href="Courses.html">
-                        Myob</a>
+        <button type="button" id="chatter" onclick="chaton()"><i class="fa-regular fa-comment fa-flip-horizontal fa-2xl"
+                style="color: rgb(188, 157, 46);"></i></button>
+        <div class="chat">
+            <div id="chatbot">
+                <div class="head">
+                    SHAH ACADEMY CHATBOT
+                    <button type="button" id="revert" onclick="chatoff()">X</button>
                 </div>
-            </div>
-            <div class="card-body">
-                <div class="card-body-in">
-                    <img id="small-icon" src="images\DM.png" alt="Digi-Market" class="icon"></img>
-                    <a href="Courses.html">Digital Marketing</a>
+                <div class="chatinterface">
                 </div>
-            </div>
-            <div class="card-body">
-                <div class="card-body-in">
-                    <img id="small-icon" src="images\X.png" alt="Xero" class="icon"></img>
-                    <a href="Courses.html">Xero
-                </div></a>
-            </div>
-            <div class="card-body">
-                <div class="card-body-in">
-                    <img id="small-icon" src="images\T.png" alt="Tally" class="icon"></img>
-                    <a href="Courses.html">Tally</a>
+                <div class="buttons">
+                    <button type="button" id="Yes" onclick="submitAns('Yes')">YES</button>
+                    <button type="button" id="No" onclick="submitAns('No')">NO</button>
                 </div>
-            </div>
-        </div><br>
-    </div>
-
-    <div class="horizontal-row">
-            <hr id="row"><pre> BEST EXPERT TRAINER</pre>
-    </div>
-   
-    <div class="main-content" id="divl">
-        <div>
-            <div>
-                <h2>Our proffessional teachers</h2>
-            </div>
-            <div class="card" id="Prof">
-                <div class="tcard">
-                    <img src="images/1.png" alt="Proffesor1"></img>
-                    <br>
-                    <b style="color:rgb(255, 255, 255)">Dr. Raj Mehta</b><br>
-                    Experience: 10 Years<br>
-                    Myob
-                </div>
-                <div class="tcard">
-                    <img src="images/2.png" alt="Proffesor2"></img>
-                    <br>
-                    <b style="color:rgb(255, 255, 255)">Ratna Bharti</b><br>
-                    Experience: 8 Years<br>
-                    Xero
-                </div>
-                <div class="tcard" style="margin-right: 0;">
-                    <img src="images/3.png" alt="Proffesor3"></img>
-                    <br>
-                    <b style="color:rgb(255, 255, 255)">Darshan Bhatt</b><br>
-                    Experience: 7 Years<br>
-                    Tally
+                <div class="insideChat">
+                    <input type="text" id="Queryin" placeholder="Enter Query" />
+                    <button type="button" id="Send" onclick="Send()">Send</button>
+                    <button type="button" id="Clear" onclick="Clear()">Clear</button>
                 </div>
             </div>
         </div>
-    </div><br><br>
+    </main>
 
     <footer class="footer">
         <div id="foot1">
@@ -151,13 +450,19 @@
             <h4 align="center">Shah Academy</h4>
             <h3>Follow Us</h3>
             <div align="left">
-                <i class="fa-brands fa-facebook" style="color:rgb(83, 83, 247)"></i> 
-                <i class="fa-brands fa-twitter" style="color:aqua"></i> 
-                <i class="fa-brands fa-whatsapp" style="color:rgb(3, 209, 3)"></i> 
-                <i class="fa-brands fa-youtube" style="color:red;"></i>
+                <a href="https://www.facebook.com/share/1Hm9HTFLxr/" target="_blank"><i class="fa-brands fa-facebook"
+                        style="color:rgb(83, 83, 247)"></i></a>
+                <a href="https://x.com/home" target="_blank"><i class="fa-brands fa-twitter" style="color:aqua"></i></a>
+                <a href="https://www.instagram.com/siddhshah22?igsh=MWc4aTJkbWFxYWV4eg==" target="_blank"><i
+                        class="fa-brands fa-instagram" style="color:#d37a98;background: radial-gradient(circle at 30% 107%, 
+                    #fdf497 0%, #fdf497 5%, #fd5949 45%, 
+                    #d6249f 60%, #285AEB 90%);color:white;border-radius:5px;"></i></a>
+                <a href="https://www.youtube.com/@freecodecamp" target="_blank"><i class="fa-brands fa-youtube"
+                        style="color:red;"></i></a>
             </div>
         </div>
         <div>
+            <div id="toast">Copied</div>
             <h3>Quick Links</h3>
             <div>
                 <a href="Home.html">Home</a>
@@ -178,10 +483,16 @@
         <div>
             <h3>Contact Us</h3>
             <div>
-                Email-Id : shahsiddhb@gmail.com
+                📧 Email:
+                <span onclick="copyToClipboard('info@shahacademy.com')">
+                    info@shahacademy.com
+                </span>
             </div>
             <div>
-                Contact : 9586629207
+                📞 Number:
+                <span onclick="copyToClipboard('+91-9876543210')">
+                    +91-9876543210
+                </span>
             </div>
             <div>
                 Address : 123, ABC Road, XYZ City

@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shah Academy</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="images\logo2.jpg">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shah Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="AboutUs.css">
+    <link rel="icon" href="images\logo2.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="javascript.js" defer></script>
+    <script src="AboutUs.js" defer></script>
+</head>
+
 <body>
     <nav class="iconbar">
         <a href="Home.html" target="_parent">
             <img src="images\logo2.jpg" class="icon" alt="Shah Academy">
         </a>
         <ul>
-            <li id="trial">
+            <li>
                 <a href="Home.html">Home</a>
             </li>
             <li>
@@ -27,11 +38,12 @@
                 <div class="Drop">
                     <div><a href="Courses.html">Courses</a></div>
                     <div class="drop-down">
-                      <a href="Courses.html">TALLY</a>
-                      <a href="Courses.html">SAGE</a>
-                      <a href="Courses.html">MYOB</a>
+                        <button onclick="goto('Tally')">TALLY</button>
+                        <button onclick="goto('Content Writing')">Content Writing</button>
+                        <button onclick="goto('SAGE')">SAGE</button>
+                        <button onclick="goto('App Development')">App Development</button>
                     </div>
-                  </div>
+                </div>
             </li>
             <li>
                 <a href="Review.html">Review</a>
@@ -41,20 +53,20 @@
             </li>
         </ul>
         <span class="iconbar-logout">
-                <a href="Login.html">Logout</a>
+            <button onclick="clearData()"><a href="Login.html">Logout</a></button>
         </span>
     </nav>
 
     <main>
-        <div class="About">
-            <h1>About Us</h1>
+        <div class="Title">
+            <h1 data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out">About Us</h1>
         </div>
 
         <section class="About-content">
-            <div class="image2">
+            <div class="aboutImg">
                 <img src="images\class.jpg" alt="class"></img>
             </div>
-            
+
             <div>
                 <span class="horizontal-row">
                     <hr id="row">
@@ -65,16 +77,29 @@
                     Welcome to Shah Academy
                 </h1>
                 <p>
-                    Shah Academy was incorparated in 1994, driven by a shared purpose of filling out gap of Education and helping students launch their growth-focused careers.<b>Shah Academy</b> has been a pioneer in providing advance courses for computer science and technology. Our mission is to provide quality education to students and help them achieve their goals.Professional training in <b> TALLY Prime, MyOB, QuickBook, Xero, Sage accounting</b> software applicable in <b>INDIA, USA, CANADA, UK & AUTRAILIA & many more.</b>
+                    Shah Academy was incorparated in 1994, driven by a shared purpose of filling out gap of Education
+                    and helping students launch their growth-focused careers.<b>Shah Academy</b> has been a pioneer in
+                    providing advance courses for computer science and technology. Our mission is to provide quality
+                    education to students and help them achieve their goals.Professional training in <b> TALLY Prime,
+                        MyOB, QuickBook, Xero, Sage accounting</b> software applicable in <b>INDIA, USA, CANADA, UK &
+                        AUTRAILIA & many more.</b>
                 </p>
                 <p>
-                    We also provide Digital marketing industry-lead certificate that thrives in the digital realm. For students or proffesionals, we offer <b>Digital Marketing courses</b> cutomized to meet learning goals. In addition, wee provide Digital Marketing courses with certificaions led by industry experts.
+                    We also provide Digital marketing industry-lead certificate that thrives in the digital realm. For
+                    students or proffesionals, we offer <b>Digital Marketing courses</b> cutomized to meet learning
+                    goals. In addition, wee provide Digital Marketing courses with certificaions led by industry
+                    experts.
                 </p>
-                <a href="#more" id="dec-no"><button class="Learn" onclick="this.style.display='none'">Learn More <i class="fa-solid fa-arrow-right"></i>
-                </button></a>
                 <p id="more">
-                    Our mission is to provide quality education that inspires students to achieve their personal and professional goals. We strive to foster an innovative learning environment that nurtures talent, promotes critical thinking, and encourages lifelong learning.
+                    We are committed to providing the best learning experience for our students. Our team of
+                    experienced instructors and industry professionals are dedicated to helping students succeed in
+                    their careers. We offer a wide range of courses, from basic to advanced levels, to meet the needs of
+                    all learners. Our mission is to provide quality education that inspires students to achieve their
+                    personal and professional goals. We strive to foster an innovative learning environment that
+                    nurtures talent, promotes critical thinking, and encourages lifelong learning.
                 </p>
+                <button type="button" id="Learn" onclick="toggle()">Learn More <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </div>
             <br><br>
 
@@ -95,12 +120,12 @@
                 <div class="last-about">
                     <i class="fa-solid fa-film fa-2xl"></i>
                     <div>
-                    <h3>
-                        Details Video tutorial
-                    </h3>
-                    <p>
-                        Have interactive session
-                    </p>   
+                        <h3>
+                            Details Video tutorial
+                        </h3>
+                        <p>
+                            Have interactive session
+                        </p>
                     </div>
                 </div><br>
                 <div class="last-about">
@@ -111,19 +136,20 @@
                         </h3>
                         <p>
                             Support after course completion as well
-                        </p>   
-                        </div>
+                        </p>
+                    </div>
                 </div><br>
-                <div class="iconbar-logout"><a href="Courses.html"><tab>Our courses <i class="fa-solid fa-arrow-right"></i></tab></a></div>
+                <div class="iconbar-logout"><a href="Courses.html">
+                        <tab>Our courses <i class="fa-solid fa-arrow-right"></i></tab>
+                    </a></div>
             </div>
 
-            <div class="image3">
-                <img src="images/Comp-teach.jpg" ></img>
+            <div class="aboutImg2">
+                <img src="images/Comp-teach.jpg"></img>
             </div>
-            
+
         </section>
     </main>
-    <br><br><br>
 
     <footer class="footer">
         <div id="foot1">
@@ -131,13 +157,19 @@
             <h4 align="center">Shah Academy</h4>
             <h3>Follow Us</h3>
             <div align="left">
-                <i class="fa-brands fa-facebook" style="color:rgb(83, 83, 247)"></i> 
-                <i class="fa-brands fa-twitter" style="color:aqua"></i> 
-                <i class="fa-brands fa-whatsapp" style="color:rgb(3, 209, 3)"></i> 
-                <i class="fa-brands fa-youtube" style="color:red;"></i>
+                <a href="https://www.facebook.com/share/1Hm9HTFLxr/" target="_blank"><i class="fa-brands fa-facebook"
+                        style="color:rgb(83, 83, 247)"></i></a>
+                <a href="https://x.com/home" target="_blank"><i class="fa-brands fa-twitter" style="color:aqua"></i></a>
+                <a href="https://www.instagram.com/siddhshah22?igsh=MWc4aTJkbWFxYWV4eg==" target="_blank"><i
+                        class="fa-brands fa-instagram" style="color:#d37a98;background: radial-gradient(circle at 30% 107%, 
+                    #fdf497 0%, #fdf497 5%, #fd5949 45%, 
+                    #d6249f 60%, #285AEB 90%);color:white;border-radius:5px;"></i></a>
+                <a href="https://www.youtube.com/@freecodecamp" target="_blank"><i class="fa-brands fa-youtube"
+                        style="color:red;"></i></a>
             </div>
         </div>
         <div>
+            <div id="toast">Copied</div>
             <h3>Quick Links</h3>
             <div>
                 <a href="Home.html">Home</a>
@@ -158,16 +190,23 @@
         <div>
             <h3>Contact Us</h3>
             <div>
-                Email-Id : shahsiddhb@gmail.com
+                📧 Email:
+                <span onclick="copyToClipboard('info@shahacademy.com')">
+                    info@shahacademy.com
+                </span>
             </div>
             <div>
-                Contact : 9586629207
+                📞 Number:
+                <span onclick="copyToClipboard('+91-9876543210')">
+                    +91-9876543210
+                </span>
             </div>
             <div>
                 Address : 123, ABC Road, XYZ City
             </div>
         </div>
     </footer>
-    
+
 </body>
+
 </html>

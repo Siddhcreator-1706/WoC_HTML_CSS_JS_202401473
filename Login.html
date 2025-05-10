@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Login.css">
     <link rel="icon" href="images\logo2.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="Login.js" defer></script>
 </head>
-<body class="main">
-    <form action="Home.html" target="_parent" class="form" method="get">
-        <div>
-            <h1 align="center">Login</h1>
-            <div class="form-content">
-                <label for="Username">Username</label><br>
-                <input type="text" placeholder="Enter Your Name" minlength="5" maxlength="50" size="55" required></input>
-            </div>
-            <br>
-            <div class="form-content">
-                <label for="Email">Email</label><br>
-                <input type="email" placeholder="abc@xyz.com" size="55" required></input>
-            </div>
-            <br>
-            <div class="form-content">
-                <label for="Password">Password</label><br>
-                <input type="password" placeholder="Enter Your Password" size="50" minlength="8" required>
-                <i class="fa-regular fa-eye-slash"></i>
-                <!-- <i class="fa-regular fa-eye"></i> -->
-                </input>
-            </div>
-            <br><br>
-            <div align="center" class="form-submit-button">
-                <input type="submit" value="LOGIN" >
-            </div>
-            <div class="form-content" align="center">
-                Don't have an account? <a href="SignUp.html">Sign Up</a>
-            </div>
+
+<body>
+    <div class="theme-toggle">
+        <i class="fa-solid fa-moon" id="theme-icon" onclick="toggleTheme()"></i>
+    </div>
+
+    <form action="Home.html" class="Login-box" method="get" id="Login">
+        <h1><span id="typing"></span></h1>
+
+        <div class="Login-content">
+            <label for="name">Username</label><br>
+            <input type="text" name="Username" id="name" placeholder="Enter Your Name" minlength="5" maxlength="50"
+                autocomplete="on" required />
         </div>
 
+        <div class="Login-content">
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="Email" placeholder="abc@xyz.com" autocomplete="on" required />
+        </div>
+
+        <div class="Login-content" id="password">
+            <label for="pwd">Password</label><br>
+            <input type="password" name="password" placeholder="Enter Your Password" minlength="8" id="pwd"
+                autocomplete="on" required />
+            <button type="button" onclick="togglePassword('pwd', 'eye', 'eye-slash')">
+                <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
+                <i class="fa-regular fa-eye" id="eye" style="display: none;"></i>
+            </button>
+        </div>
+
+        <div class="Login-submit-button">
+            <input type="submit" value="LOGIN">
+        </div>
+
+        <div class="Login-content">
+            Don't have an account? <a href="SignUp.html">Sign Up</a>
+        </div>
     </form>
+
+    <canvas id="bubble-canvas"></canvas>
+
 </body>
+
 </html>

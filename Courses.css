@@ -1,0 +1,243 @@
+.Courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.Courses>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s ease-in-out;
+}
+
+.Courses>div:hover {
+    transform: scale(1.075);
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.search-container {
+    width: 45%;
+}
+
+#search-bar {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border: 2px groove #ccc;
+    border-radius: 5px;
+}
+
+.filter-container {
+    text-align: center;
+}
+
+.filter-container select {
+    padding: 10px;
+    border: 2px groove #ccc;
+    border-radius: 5px;
+}
+
+.buy-button {
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    color: rgb(255, 243, 243);
+    background-color: rgb(236, 34, 34);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.buy-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+button.buy-button:active {
+    background-color: grey;
+}
+
+.Progress {
+    background: linear-gradient(to right, rgb(26, 255, 0) 0%, aqua 0% 100%);
+    width: 100%;
+    height: 15px;
+}
+
+.Coins {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: conic-gradient(rgb(0, 156, 16) 0deg, rgb(0, 42, 250) 360deg, white 360deg);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#title {
+    font-size: 1.85em;
+    text-align: center;
+    color: rgb(228, 233, 238);
+    text-shadow: 2px -2px 8px rgba(255, 255, 255, 0.8);
+    font-family: Cursive, 'Times New Roman', Times, serif;
+}
+
+.Enroll {
+    display: flex;
+}
+
+.Enrolled {
+    display: none;
+    column-gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Enrolled-button {
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    color: rgb(46, 3, 3);
+    background-color: rgb(54, 236, 34);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: default;
+    border-radius: 5px;
+}
+
+#background {
+    display: flex;
+    background: linear-gradient(145deg, rgb(255, 104, 200), rgb(174, 3, 111));
+    align-items: center;
+    justify-content: center;
+    color: #edf03f;
+    height: 80%;
+    width: 80%;
+    font: caption;
+    font-style: italic;
+    border-radius: 50%;
+}
+
+.Money {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.Money button {
+    color: rgb(255, 255, 255);
+    background-color: #761178;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.PopUp {
+    display: none;
+    background-color: rgba(83, 82, 82, 0.8);
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+
+.PopWindow {
+    background-color: #e2d1c3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    line-height: 1.5;
+    border-radius: 15px;
+    width: 25%;
+    height: 25%;
+}
+
+#Amount {
+    padding: 3px;
+    width: 100%;
+}
+
+.Buttons {
+    text-align: right;
+}
+
+#Completed {
+    display: none;
+    line-height: 1.8;
+    text-decoration: overline;
+}
+
+.Buttons button {
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.Course {
+    background-color: rgb(226, 209, 195);
+    padding: 15px;
+    margin: 5%;
+    border-radius: 10px;
+    width: 50%;
+    line-height: 1.5;
+}
+
+.Course button {
+    width: 25%;
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.PopUpCourse {
+    display: none;
+    background-color: rgba(83, 82, 82, 0.8);
+    z-index: 2;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+
+a.Videos {
+    text-decoration: wavy;
+    color: rgb(151, 68, 0);
+}
+
+a.Videos:active {
+    color: #ff0000;
+}

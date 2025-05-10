@@ -1,0 +1,14 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Treat text files as UTF-8 and normalize line endings to LF
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+
+# Ensure images are treated as binary
+*.png binary
+*.jpg binary
+
+# Optional: mark gitattributes file itself as text
+.gitattributes text

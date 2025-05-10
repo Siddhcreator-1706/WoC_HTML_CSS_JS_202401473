@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shah Academy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Review.css">
     <link rel="icon" href="images\logo2.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="javascript.js" defer></script>
+    <script src="Review.js" defer></script>
 </head>
+
 <body>
     <nav class="iconbar">
         <a href="Home.html" target="_parent">
             <img src="images\logo2.jpg" class="icon" alt="Shah Academy">
         </a>
         <ul>
-            <li id="trial">
+            <li>
                 <a href="Home.html">Home</a>
             </li>
             <li>
@@ -27,11 +38,12 @@
                 <div class="Drop">
                     <div><a href="Courses.html">Courses</a></div>
                     <div class="drop-down">
-                      <a href="Courses.html">TALLY</a>
-                      <a href="Courses.html">SAGE</a>
-                      <a href="Courses.html">MYOB</a>
+                        <button onclick="goto('Tally')">TALLY</button>
+                        <button onclick="goto('Content Writing')">Content Writing</button>
+                        <button onclick="goto('SAGE')">SAGE</button>
+                        <button onclick="goto('App Development')">App Development</button>
                     </div>
-                  </div>
+                </div>
             </li>
             <li>
                 <a href="Review.html">Review</a>
@@ -41,58 +53,73 @@
             </li>
         </ul>
         <span class="iconbar-logout">
-                <a href="Login.html">Logout</a>
+            <button onclick="clearData()"><a href="Login.html">Logout</a></button>
         </span>
     </nav>
 
     <main>
-        <div class="About">
-            <h1>Reviews</h1>
+        <div class="Title">
+            <h1 data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out">Reviews</h1>
         </div>
         <div class="Review">
-            <div><h1> < </h1>
-            </div>
-            <div>
-                <img src="images/logo2.jpg" class="image"></img><br>
-                <p>All the faculties are nice ... My all doubts are cleared.</p>
-                <p>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i></p>
-                <b>Shivam Sagar</b><br><br>
-                <div id="Review-form">
-                    Want to add review?
+            <div class="Review-content"  data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
+                <div>
+                    <button type="button" onclick="rotate('back')">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
                 </div>
-                <div id="Review-button">
-                    <a href="#Reviewing-form"><button>Add Review</button></a>
+                <div class="Review-Describe">
+                    <img src="images/logo2.jpg" class="image" alt="Review Logo">
+                    <span class="Description" id="Description1">
+                        <p id="Described">All the faculties are best ... My all doubts are cleared. Best Academy ever.
+                            Loved all faculties
+                            here
+                            a lot.</p>
+                        <p id="Rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </p>
+                        <b id="author">Shivam Sagar</b>
+                    </span>
+                    <div>
+                        <span>Want to add review?</span>
+                        <div id="Review-button">
+                            <button onclick="showform('.Review-form','.Review-content','flip-left')">Add Review</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" onclick="rotate('front')">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
-            <div><h1> > </h1>
+            <div class="Review-form" id="Reviewing-form">
+                <h1>Add Your Review</h1><br>
+                <form method="get" onsubmit="modifyData(this)">
+                    <label for="name">Name</label><br><br>
+                    <input type="text" id="name" name="name" autocomplete="on" required><br><br>
+                    <label for="Description">Description</label><br><br>
+                    <textarea name="Description" id="Description" autocomplete="on" cols="80" rows="7"
+                        style="resize: vertical;"></textarea><br><br>
+                    <label for="Rating">Rating</label><br><br>
+                    <select id="Rating" name="Rating" autocomplete="on">
+                        <option value="5">5 star</option>
+                        <option value="4">4 star</option>
+                        <option value="3">3 star</option>
+                        <option value="2">2 star</option>
+                        <option value="1">1 star</option>
+                    </select><br><br>
+                    <div id="Review-button">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                        <button onclick="showform('.Review-content','.Review-form','flip-right')">Back</button>
+                    </div>
+                </form>
             </div>
-        </div>
-        <div class="Review-form" id="Reviewing-form">
-            <h1>Add Your Review</h1><br>
-            <form action="Review.html" method="get">
-                <label>Name</label><br><br>
-                <input type="text" required><br><br>
-                <label>Email</label><br><br>
-                <input type="email" required><br><br>
-                <label>Rating</label><br><br>
-                <select>
-                    <option value="5star">5 star</option>
-                    <option value="4star">4 star</option>
-                    <option value="3star">3 star</option>
-                    <option value="2star">2 star</option>
-                    <option value="1star">1 star</option>
-                  </select><br><br>
-                  <div id="Review-button">
-                      <button type="submit" >Submit</button>
-                      <button type="reset">Cancel</button>
-                  </div>
-            </form>
-        </div>
     </main>
 
     <footer class="footer">
@@ -101,13 +128,19 @@
             <h4 align="center">Shah Academy</h4>
             <h3>Follow Us</h3>
             <div align="left">
-                <i class="fa-brands fa-facebook" style="color:rgb(83, 83, 247)"></i> 
-                <i class="fa-brands fa-twitter" style="color:aqua"></i> 
-                <i class="fa-brands fa-whatsapp" style="color:rgb(3, 209, 3)"></i> 
-                <i class="fa-brands fa-youtube" style="color:red;"></i>
+                <a href="https://www.facebook.com/share/1Hm9HTFLxr/" target="_blank"><i class="fa-brands fa-facebook"
+                        style="color:rgb(83, 83, 247)"></i></a>
+                <a href="https://x.com/home" target="_blank"><i class="fa-brands fa-twitter" style="color:aqua"></i></a>
+                <a href="https://www.instagram.com/siddhshah22?igsh=MWc4aTJkbWFxYWV4eg==" target="_blank"><i
+                        class="fa-brands fa-instagram" style="color:#d37a98;background: radial-gradient(circle at 30% 107%, 
+                    #fdf497 0%, #fdf497 5%, #fd5949 45%, 
+                    #d6249f 60%, #285AEB 90%);color:white;border-radius:5px;"></i></a>
+                <a href="https://www.youtube.com/@freecodecamp" target="_blank"><i class="fa-brands fa-youtube"
+                        style="color:red;"></i></a>
             </div>
         </div>
         <div>
+            <div id="toast">Copied</div>
             <h3>Quick Links</h3>
             <div>
                 <a href="Home.html">Home</a>
@@ -128,10 +161,16 @@
         <div>
             <h3>Contact Us</h3>
             <div>
-                Email-Id : shahsiddhb@gmail.com
+                📧 Email:
+                <span onclick="copyToClipboard('info@shahacademy.com')">
+                    info@shahacademy.com
+                </span>
             </div>
             <div>
-                Contact : 9586629207
+                📞 Number:
+                <span onclick="copyToClipboard('+91-9876543210')">
+                    +91-9876543210
+                </span>
             </div>
             <div>
                 Address : 123, ABC Road, XYZ City
@@ -139,4 +178,5 @@
         </div>
     </footer>
 </body>
+
 </html>

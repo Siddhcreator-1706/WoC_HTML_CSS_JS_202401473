@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gradient Background */
+body {
+    background: linear-gradient(135deg, #6e6031, #ffc107, #ff8b00),
+                linear-gradient(185deg, #5ebd91, #33d927, #b7ff00),
+                linear-gradient(225deg, #badeff, #0751ff, #0fd8e6);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body a{
+    color: #000c8e;
+}
+
+/* Bubbles Canvas */
+#bubble-canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Login Box */
+.Login-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    background-color:rgba(211, 110, 165, 0.553);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 350px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    animation: fadeSlideIn 1.5s ease forwards; 
+    text-align: center;
+}
+
+/* Form Fields */
+.Login-content {
+    margin: 15px 0;
+    position: relative;
+}
+.Login-content input[type="text"],
+.Login-content input[type="email"],
+.Login-content input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+#password, #password1 {
+    position: relative;
+    justify-content: center;
+}
+#password button, #password1 button {
+    position: absolute;
+    right: 30px;
+    margin-top: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.Login-submit-button input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: none;
+    background: #ff8b00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.Login-submit-button input[type="submit"]:hover {
+    background: #ffc107;
+}
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Theme Toggle */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 10;
+    cursor: pointer;
+}
+.theme-toggle i {
+    font-size: 24px;
+    color: rgb(63, 63, 63);
+}
+
+body.light .theme-toggle i{
+    color: white;
+}
+
+body.light .Login-box {
+    background-color:rgba(86, 44, 67, 0.553);
+    color: white;
+}
+body.light {
+    background: linear-gradient(135deg, #7a6b36, #765a05, #7a4401),
+                linear-gradient(185deg, #2f5d47, #1b7415, #567801),
+                linear-gradient(225deg, #5d6f81, #05329a, #096f76);
+}
+
+body.light .Login-submit-button input[type="submit"] {
+    background: #7c4501;
+    color: rgb(255, 255, 255);
+}
+body.light .Login-submit-button input[type="submit"]:hover {
+    background: #8a6804;
+} 
+body.light a{
+    color: cyan;
+}

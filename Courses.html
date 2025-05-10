@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shah Academy</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="images\logo2.jpg">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shah Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Courses.css">
+    <link rel="icon" href="images\logo2.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="javascript.js" defer></script>
+    <script src="Courses.js" defer></script>
+</head>
+
 <body>
     <nav class="iconbar">
         <a href="Home.html" target="_parent">
             <img src="images\logo2.jpg" class="icon" alt="Shah Academy">
         </a>
         <ul>
-            <li id="trial">
+            <li>
                 <a href="Home.html">Home</a>
             </li>
             <li>
                 <a href="AboutUs.html">About Us</a>
             </li>
             <li>
-                <div class="Drop">
-                    <div><a href="Courses.html">Courses</a></div>
-                    <div class="drop-down">
-                      <a href="Courses.html">TALLY</a>
-                      <a href="Courses.html">SAGE</a>
-                      <a href="Courses.html">MYOB</a>
-                    </div>
-                  </div>
+                <a href="Courses.html">Courses</a>
             </li>
             <li>
                 <a href="Review.html">Review</a>
@@ -41,74 +45,278 @@
             </li>
         </ul>
         <span class="iconbar-logout">
-                <a href="Login.html">Logout</a>
+            <button onclick="clearData()"><a href="Login.html">Logout</a></button>
         </span>
     </nav>
 
     <main>
-        <h1 align="center" id="title">OUR COURSES</h1>
-        <div class="Courses">
-            <div>
-                <h2>Tally</h2>
-                Master accounting and inventory management with Tally.
-                <h4>Coins: 500</h4>
-                <a class="Enroll" href="#Enrolling"><button onclick="this.style.display='none'">Enroll</button></a>
-                <div id="Enrolling">
-                    <a href="Courses.html" class="Enrolled"><button >Enrolled</button></a>
-                    <a  href="Courses.html" class="OpenCourse"><button >Open Course</button></a>
-                </div>
+        <h1 id="title" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="ease-in-out">OUR COURSES</h1>
+
+        <div class="filters">
+            <div class="search-container" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-out">
+                <input type="text" placeholder="Search for courses..." id="search-bar" oninput="searchfilter(this)" />
             </div>
-            <div>
-                <h2>Digital Marketing</h2>
-                Grow your Skills and master digital marketing.
-                <h4>Coins: 200</h4>
-                <a class="Enroll" href="#Enrolling"><button onclick="this.style.display='none'">Enroll</button></a>
-                <div id="Enrolling">
-                    <a href="Courses.html" class="Enrolled"><button >Enrolled</button></a>
-                    <a  href="Courses.html" class="OpenCourse"><button >Open Course</button></a>
-                </div>
+
+            <div class="filter-container" data-aos="fade-right" data-aos-duration="2500" data-aos-easing="ease-in-out">
+                <label for="sort-filter">Sort:</label>
+                <select id="sort-filter" onclick="sortCourses(this.value)">
+                    <option value="none" selected disabled>Select sort</option>
+                    <option value="straight">A-Z</option>
+                    <option value="reverse">Z-A</option>
+                    <option value="low">Cheapest first</option>
+                    <option value="high">Costliest first</option>
+                </select>
             </div>
-            <div>
-                <h2>XERO</h2>
-                Streamline Your Acounting processes with XERO.
-                <h4>Coins: 1000</h4>
-                <a class="Enroll" href="#Enrolling"><button onclick="this.style.display='none'">Enroll</button></a>
-                <div id="Enrolling">
-                    <a href="Courses.html" class="Enrolled"><button >Enrolled</button></a>
-                    <a  href="Courses.html" class="OpenCourse"><button >Open Course</button></a>
-                </div>
+
+            <div class="filter-container" data-aos="fade-right" data-aos-duration="2500" data-aos-easing="ease-in-out">
+                <label for="enrollment-filter">Filter by Enrollment:</label>
+                <select id="enrollment-filter" onclick="enrollmentfilter(this)">
+                    <option value="all">All Courses</option>
+                    <option value="enrolled">Enrolled</option>
+                    <option value="not-enrolled">Not Enrolled</option>
+                    <option value="free">Free</option>
+                </select>
             </div>
-            <div>
-                <h2>MYOB</h2>
-                Simplify buisness accounting with MYOB.
-                <h4>Free</h4>
-                <a class="Enroll" href="#Enrolling"><button onclick="this.style.display='none'">Enroll</button></a>
-                <div id="Enrolling">
-                    <a href="Courses.html" class="Enrolled"><button >Enrolled</button></a>
-                    <a  href="Courses.html" class="OpenCourse"><button >Open Course</button></a>
+            <div class="Money" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease-in-out">
+                <div class="Coins">
+                    <span id="background">0</span>
                 </div>
+                <span><button type="button" onclick="PopUp()">Add Money</button></span>
             </div>
-            <div>
-                <h2>QBOOKS</h2>
-                Learn how to manage finances with QuickBooks.
-                <p><b>Coins: 500</b></p>
-                <a class="Enroll" href="#Enrolling"><button onclick="this.style.display='none'">Enroll</button></a>
-                <div id="Enrolling">
-                    <a href="Courses.html" class="Enrolled"><button >Enrolled</button></a>
-                    <a  href="Courses.html" class="OpenCourse"><button >Open Course</button></a>
-                </div>
-            </div>
-            <div>
-                <h2>SAGE</h2>
-                Discover powerful tools for managing your buisness with SAGE.
-                <h4>Coins: 750</h4>
-                <a class="Enroll" href="#Enrolling"><button onclick="this.style.display='none'">Enroll</button></a>
-                <div id="Enrolling">
-                    <a href="Courses.html" class="Enrolled"><button >Enrolled</button></a>
-                    <a  href="Courses.html" class="OpenCourse"><button >Open Course</button></a>
+        </div>
+
+        <div class="PopUp">
+            <div class="PopWindow">
+                <h1>Recharge Amount</h1>
+                <input type="number" id="Amount" placeholder="Enter amount" />
+                <div class="Buttons">
+                    <button type="button" onclick="AddMoney()">Recharge</button>
+                    <button type="button" onclick="ClosePop()">Close</button>
                 </div>
             </div>
         </div>
+
+        <div class="Courses" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease-in-out">
+            <div data-course="Tally" data-value="500">
+                <h2>Tally</h2>
+                Master accounting and inventory management with Tally.
+                <h4>Coins: <span class="course-price">500</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling1" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="XERO" data-value="1000">
+                <h2>XERO</h2>
+                Streamline your accounting processes with XERO.
+                <h4>Coins: <span class="course-price">1000</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling2" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="MYOB" data-value="0">
+                <h2>MYOB</h2>
+                Simplify business accounting with MYOB.
+                <h4>Free</h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Enroll</button></div>
+                <div id="Enrolling3" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="QBOOKS" data-value="500">
+                <h2>QBOOKS</h2>
+                Learn how to manage finances with QuickBooks.
+                <h4>Coins: <span class="course-price">500</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling4" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="SAGE" data-value="750">
+                <h2>SAGE</h2>
+                Discover powerful tools for managing your business with SAGE.
+                <h4>Coins: <span class="course-price">750</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling5" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Python Programming" data-value="600">
+                <h2>Python Programming</h2>
+                Learn Python from basics to advanced concepts with hands-on projects.
+                <h4>Coins: <span class="course-price">600</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling6" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Data Science Fundamentals" data-value="850">
+                <h2>Data Science Fundamentals</h2>
+                Master the essential skills for data analysis and visualization.
+                <h4>Coins: <span class="course-price">850</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling7" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Web Development Bootcamp" data-value="250">
+                <h2>Web Development Bootcamp</h2>
+                Build modern websites with HTML, CSS, JavaScript and frameworks.
+                <h4>Coins: <span class="course-price">250</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling8" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Graphic Design" data-value="0">
+                <h2>Graphic Design</h2>
+                Learn design principles and tools like Photoshop and Illustrator.
+                <h4>Free</h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Enroll</button></div>
+                <div id="Enrolling9" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Mobile App Development" data-value="900">
+                <h2>Mobile App Development</h2>
+                Create iOS and Android apps using React Native and Flutter.
+                <h4>Coins: <span class="course-price">900</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling10" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Cybersecurity Essentials" data-value="950">
+                <h2>Cybersecurity Essentials</h2>
+                Learn to protect systems and networks from digital attacks.
+                <h4>Coins: <span class="course-price">950</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling11" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Cloud Computing" data-value="800">
+                <h2>Cloud Computing</h2>
+                Master AWS, Azure and Google Cloud platforms.
+                <h4>Coins: <span class="course-price">800</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling12" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Artificial Intelligence" data-value="1000">
+                <h2>Artificial Intelligence</h2>
+                Introduction to machine learning and neural networks.
+                <h4>Coins: <span class="course-price">1000</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling13" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Blockchain Technology" data-value="1100">
+                <h2>Blockchain Technology</h2>
+                Understand cryptocurrencies and smart contracts development.
+                <h4>Coins: <span class="course-price">1100</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling14" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="UI/UX Design" data-value="700">
+                <h2>UI/UX Design</h2>
+                Learn user-centered design principles and prototyping tools.
+                <h4>Coins: <span class="course-price">700</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling15" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Digital Photography" data-value="550">
+                <h2>Digital Photography</h2>
+                Master camera techniques and photo editing software.
+                <h4>Coins: <span class="course-price">550</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling16" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Content Writing" data-value="400">
+                <h2>Content Writing</h2>
+                Develop professional writing skills for digital media.
+                <h4>Coins: <span class="course-price">400</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling17" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Video Editing" data-value="650">
+                <h2>Video Editing</h2>
+                Learn professional video editing with Premiere Pro and After Effects.
+                <h4>Coins: <span class="course-price">650</span></h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Buy with Coins</button></div>
+                <div id="Enrolling18" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+
+            <div data-course="Quant Computing" data-value="0">
+                <h2>Quant Computing</h2>
+                Master Quant Analysis and Algorithms from experts.
+                <h4>Free</h4>
+                <div class="Enroll"><button class="buy-button" onclick="buy(this)">Enroll</button></div>
+                <div id="Enrolling19" class="Enrolled">
+                    <span class="Enrolled-button">Enrolled</span>
+                    <button class="buy-button" onclick="PopUpCourse(this)">Open Course</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="PopUpCourse">
+            <div class="Course">
+                <button type="button" onclick="ClosePopCourse()">Back to Courses</button>
+                <div class="Progress"></div>
+                <br>
+                <div id="Completed">Congratulation!!! You completed the course.🎉</div><br>
+                <button type="button" id="Reset" onclick="ResetCourse()">Reset Progress</button>
+            </div>
+        </div>
+
     </main>
 
     <footer class="footer">
@@ -117,13 +325,19 @@
             <h4 align="center">Shah Academy</h4>
             <h3>Follow Us</h3>
             <div align="left">
-                <i class="fa-brands fa-facebook" style="color:rgb(83, 83, 247)"></i> 
-                <i class="fa-brands fa-twitter" style="color:aqua"></i> 
-                <i class="fa-brands fa-whatsapp" style="color:rgb(3, 209, 3)"></i> 
-                <i class="fa-brands fa-youtube" style="color:red;"></i>
+                <a href="https://www.facebook.com/share/1Hm9HTFLxr/" target="_blank"><i class="fa-brands fa-facebook"
+                        style="color:rgb(83, 83, 247)"></i></a>
+                <a href="https://x.com/home" target="_blank"><i class="fa-brands fa-twitter" style="color:aqua"></i></a>
+                <a href="https://www.instagram.com/siddhshah22?igsh=MWc4aTJkbWFxYWV4eg==" target="_blank"><i
+                        class="fa-brands fa-instagram" style="color:#d37a98;background: radial-gradient(circle at 30% 107%, 
+                    #fdf497 0%, #fdf497 5%, #fd5949 45%, 
+                    #d6249f 60%, #285AEB 90%);color:white;border-radius:5px;"></i></a>
+                <a href="https://www.youtube.com/@freecodecamp" target="_blank"><i class="fa-brands fa-youtube"
+                        style="color:red;"></i></a>
             </div>
         </div>
         <div>
+            <div id="toast">Copied</div>
             <h3>Quick Links</h3>
             <div>
                 <a href="Home.html">Home</a>
@@ -144,10 +358,16 @@
         <div>
             <h3>Contact Us</h3>
             <div>
-                Email-Id : shahsiddhb@gmail.com
+                📧 Email:
+                <span onclick="copyToClipboard('info@shahacademy.com')">
+                    info@shahacademy.com
+                </span>
             </div>
             <div>
-                Contact : 9586629207
+                📞 Number:
+                <span onclick="copyToClipboard('+91-9876543210')">
+                    +91-9876543210
+                </span>
             </div>
             <div>
                 Address : 123, ABC Road, XYZ City
@@ -155,4 +375,5 @@
         </div>
     </footer>
 </body>
+
 </html>

@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shah Academy</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="images\logo2.jpg">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shah Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images\logo2.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Silkscreen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="javascript.js" defer></script>
+</head>
+
 <body>
     <nav class="iconbar">
         <a href="Home.html" target="_parent">
             <img src="images\logo2.jpg" class="icon" alt="Shah Academy">
         </a>
         <ul>
-            <li id="trial">
+            <li>
                 <a href="Home.html">Home</a>
             </li>
             <li>
@@ -27,11 +36,12 @@
                 <div class="Drop">
                     <div><a href="Courses.html">Courses</a></div>
                     <div class="drop-down">
-                      <a href="Courses.html">TALLY</a>
-                      <a href="Courses.html">SAGE</a>
-                      <a href="Courses.html">MYOB</a>
+                        <button onclick="goto('Tally')">TALLY</button>
+                        <button onclick="goto('Content Writing')">Content Writing</button>
+                        <button onclick="goto('SAGE')">SAGE</button>
+                        <button onclick="goto('App Development')">App Development</button>
                     </div>
-                  </div>
+                </div>
             </li>
             <li>
                 <a href="Review.html">Review</a>
@@ -41,15 +51,17 @@
             </li>
         </ul>
         <span class="iconbar-logout">
-                <a href="Login.html">Logout</a>
+            <button onclick="clearData()"><a href="Login.html">Logout</a></button>
         </span>
     </nav>
 
     <main>
-        <div class="About">
+        <div class="Title">
             <h1>Admission & Enquiry</h1>
         </div>
-        <h1 style="display:flex;align-items: center;justify-content: center;font-size: 10em; font-family: Silkscreen,'Times New Roman', Times, serif; color:azure">Thanks</h1>
+        <h1
+            style="display:flex;align-items: center;justify-content: center;font-size: 10em; font-family: Silkscreen,'Times New Roman', Times, serif; color:azure" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
+            Thanks</h1>
     </main>
 
     <footer class="footer">
@@ -58,13 +70,19 @@
             <h4 align="center">Shah Academy</h4>
             <h3>Follow Us</h3>
             <div align="left">
-                <i class="fa-brands fa-facebook" style="color:rgb(83, 83, 247)"></i> 
-                <i class="fa-brands fa-twitter" style="color:aqua"></i> 
-                <i class="fa-brands fa-whatsapp" style="color:rgb(3, 209, 3)"></i> 
-                <i class="fa-brands fa-youtube" style="color:red;"></i>
+                <a href="https://www.facebook.com/share/1Hm9HTFLxr/" target="_blank"><i class="fa-brands fa-facebook"
+                        style="color:rgb(83, 83, 247)"></i></a>
+                <a href="https://x.com/home" target="_blank"><i class="fa-brands fa-twitter" style="color:aqua"></i></a>
+                <a href="https://www.instagram.com/siddhshah22?igsh=MWc4aTJkbWFxYWV4eg==" target="_blank"><i
+                        class="fa-brands fa-instagram" style="color:#d37a98;background: radial-gradient(circle at 30% 107%, 
+                    #fdf497 0%, #fdf497 5%, #fd5949 45%, 
+                    #d6249f 60%, #285AEB 90%);color:white;border-radius:5px;"></i></a>
+                <a href="https://www.youtube.com/@freecodecamp" target="_blank"><i class="fa-brands fa-youtube"
+                        style="color:red;"></i></a>
             </div>
         </div>
         <div>
+            <div id="toast">Copied</div>
             <h3>Quick Links</h3>
             <div>
                 <a href="Home.html">Home</a>
@@ -85,10 +103,16 @@
         <div>
             <h3>Contact Us</h3>
             <div>
-                Email-Id : shahsiddhb@gmail.com
+                📧 Email:
+                <span onclick="copyToClipboard('info@shahacademy.com')">
+                    info@shahacademy.com
+                </span>
             </div>
             <div>
-                Contact : 9586629207
+                📞 Number:
+                <span onclick="copyToClipboard('+91-9876543210')">
+                    +91-9876543210
+                </span>
             </div>
             <div>
                 Address : 123, ABC Road, XYZ City
@@ -96,4 +120,5 @@
         </div>
     </footer>
 </body>
+
 </html>
