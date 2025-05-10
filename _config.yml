@@ -1,10 +1,7 @@
-# Disable Jekyll processing
+theme: jekyll-theme-minimal
 include: ['login.html']
-exclude: ['README.md']
-
-# Magic redirect rule
 defaults:
   - scope:
-      path: ""
+      path: "" # Applies to root URL
     values:
-      permalink: /login.html
+      permalink: /login.html # Forces root to redirect
