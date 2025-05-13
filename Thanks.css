@@ -1,0 +1,25 @@
+.Thanks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10em;
+    font-family: Silkscreen, 'Times New Roman', Times, serif;
+    color: azure;
+}
+
+@media screen and (max-width: 769px) {
+    .Thanks {
+        font-size: 5em;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .Thanks {
+        font-size: 2.5em;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
