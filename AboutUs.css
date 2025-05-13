@@ -17,10 +17,12 @@
 .About-content {
     display: grid;
     grid-template-columns: 49% 49%;
+    height: 100%;
     column-gap: 2%;
-    margin-top: 5%;
-    padding-right: 4%;
-    padding-left: 2%
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
 }
 
 .About-content span {
@@ -50,8 +52,13 @@
     font-family: Cursive, 'Times New Roman', Times, serif;
 }
 
+.About-content h2:hover {
+    cursor: pointer;
+}
+
 #Quote {
     font-size: 1em;
+    padding-bottom: 2%;
     font-family: monospace;
 }
 
@@ -70,7 +77,6 @@
 
 #Learn {
     align-items: center;
-    padding: left 5%;
     padding: 2%;
     width: max-content;
     background: linear-gradient(rgb(117, 117, 117), rgb(172, 171, 171));
@@ -91,10 +97,11 @@
 
 .last-about {
     display: flex;
-    height: 25%;
+    min-height: 25%;
     align-items: center;
+    justify-content: space-evenly;
     background-color: rgb(114, 137, 151);
-    padding-left: 2%;
+    padding-bottom: 2%;
     box-shadow: 4px 4px 10px rgb(54, 49, 122);
 }
 
@@ -116,4 +123,36 @@
     height: 80%;
     width: 80%;
     border-radius: 80%;
+}
+
+@media only screen and (max-width: 768px) {
+    .About-content {
+        grid-template-columns: 100%;
+        column-gap: 0;
+    }
+
+    .About-content span {
+        justify-items: center;
+    }
+
+    .About-content p {
+        font-size: 1em;
+    }
+
+    .About-content h1 {
+        font-size: 1.5em;
+    }
+
+    .About-content h2 {
+        font-size: 1.25em;
+    }
+
+    #Quote {
+        font-size: 0.9rem;
+    }
+
+    .aboutImg img {
+        width: 90%;
+        height: 90%;
+    }
 }

@@ -22,36 +22,63 @@
     <script src="Courses.js" defer></script>
 </head>
 
-<body>
+<body onresize="iconbarCloser()">
     <nav class="iconbar">
         <a href="Home.html" target="_parent">
             <img src="images\logo2.jpg" class="icon" alt="Shah Academy">
         </a>
-        <ul>
-            <li>
-                <a href="Home.html">Home</a>
-            </li>
-            <li>
-                <a href="AboutUs.html">About Us</a>
-            </li>
-            <li>
-                <a href="Courses.html">Courses</a>
-            </li>
-            <li>
-                <a href="Review.html">Review</a>
-            </li>
-            <li>
-                <a href="Enquiry.html">Enquiry Us</a>
-            </li>
-        </ul>
+        <h1 class="iconbar-title">
+            SHAH ACADEMY </h1>
+        <div>
+            <i class="fa-solid fa-bars fa-lg" id="bars" onclick="iconbarActive()"></i>
+            <div id="iconbar-tablet">
+                <ul>
+                    <li>
+                        <a href="Home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="AboutUs.html">About Us</a>
+                    </li>
+                    <li>
+                        <div class="Drop">
+                            <div><a href="Courses.html">Courses</a></div>
+                            <div class="drop-down">
+                                <button onclick="goto('Tally')">TALLY</button>
+                                <button onclick="goto('Content Writing')">Content Writing</button>
+                                <button onclick="goto('SAGE')">SAGE</button>
+                                <button onclick="goto('App Development')">App Development</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="Review.html">Review</a>
+                    </li>
+                    <li>
+                        <a href="Enquiry.html">Enquiry Us</a>
+                    </li>
+                    <li id="Logout">
+                        <button type="button" onclick="clearData()">Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <span class="iconbar-logout">
-            <button onclick="clearData()"><a href="Login.html">Logout</a></button>
+            <button type="button" onclick="clearData()">Logout</button>
         </span>
+
     </nav>
 
-    <main>
-        <h1 id="title" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="ease-in-out">OUR COURSES</h1>
+    <main onclick="iconbarCloser()">
+        <div style="display:grid;grid-template-columns: 90% 10%;padding: 10px;">
+            <div id="title" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="ease-in-out">OUR COURSES</div>
 
+            <div class="Money" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease-in-out">
+                <div class="Coins">
+                    <span id="background">0</span>
+                </div>
+                <span><button type="button" onclick="PopUp()">Add Money</button></span>
+            </div>
+        </div>
         <div class="filters">
             <div class="search-container" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-out">
                 <input type="text" placeholder="Search for courses..." id="search-bar" oninput="searchfilter(this)" />
@@ -76,12 +103,6 @@
                     <option value="not-enrolled">Not Enrolled</option>
                     <option value="free">Free</option>
                 </select>
-            </div>
-            <div class="Money" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease-in-out">
-                <div class="Coins">
-                    <span id="background">0</span>
-                </div>
-                <span><button type="button" onclick="PopUp()">Add Money</button></span>
             </div>
         </div>
 
@@ -346,7 +367,7 @@
                 <a href="AboutUs.html">About Us</a>
             </div>
             <div>
-                <a href="Courses.html">Courses</a>
+                <a href="Courses.html" style="color:rgb(188, 105, 5);text-decoration: underline;">Courses</a>
             </div>
             <div>
                 <a href="Review.html">Review</a>

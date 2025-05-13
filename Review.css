@@ -34,8 +34,9 @@
 .Review-form {
     display: none;
     flex-direction: column;
-    color: orange;
     padding: 5%;
+    width: 80%;
+    max-width: 700px;
 }
 
 .Review-content {
@@ -155,4 +156,10 @@
 
 .Review-form select {
     width: 100%;
+}
+
+#Description {
+    resize: vertical;
+    width: 100%;
+
 }

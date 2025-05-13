@@ -22,52 +22,65 @@
     <script src="AboutUs.js" defer></script>
 </head>
 
-<body>
+<body onresize="iconbarCloser()">
     <nav class="iconbar">
         <a href="Home.html" target="_parent">
             <img src="images\logo2.jpg" class="icon" alt="Shah Academy">
         </a>
-        <ul>
-            <li>
-                <a href="Home.html">Home</a>
-            </li>
-            <li>
-                <a href="AboutUs.html">About Us</a>
-            </li>
-            <li>
-                <div class="Drop">
-                    <div><a href="Courses.html">Courses</a></div>
-                    <div class="drop-down">
-                        <button onclick="goto('Tally')">TALLY</button>
-                        <button onclick="goto('Content Writing')">Content Writing</button>
-                        <button onclick="goto('SAGE')">SAGE</button>
-                        <button onclick="goto('App Development')">App Development</button>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a href="Review.html">Review</a>
-            </li>
-            <li>
-                <a href="Enquiry.html">Enquiry Us</a>
-            </li>
-        </ul>
+        <h1 class="iconbar-title">
+            SHAH ACADEMY </h1>
+        <div>
+            <i class="fa-solid fa-bars fa-lg" id="bars" onclick="iconbarActive()"></i>
+            <div id="iconbar-tablet">
+                <ul>
+                    <li>
+                        <a href="Home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="AboutUs.html">About Us</a>
+                    </li>
+                    <li>
+                        <div class="Drop">
+                            <div><a href="Courses.html">Courses</a></div>
+                            <div class="drop-down">
+                                <button onclick="goto('Tally')">TALLY</button>
+                                <button onclick="goto('Content Writing')">Content Writing</button>
+                                <button onclick="goto('SAGE')">SAGE</button>
+                                <button onclick="goto('App Development')">App Development</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="Review.html">Review</a>
+                    </li>
+                    <li>
+                        <a href="Enquiry.html">Enquiry Us</a>
+                    </li>
+                    <li id="Logout">
+                        <button type="button" onclick="clearData()">Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <span class="iconbar-logout">
-            <button onclick="clearData()"><a href="Login.html">Logout</a></button>
+            <button type="button" onclick="clearData()">Logout</button>
         </span>
+
     </nav>
 
-    <main>
+    <main onclick="iconbarCloser()">
         <div class="Title">
-            <h1 data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out">About Us</h1>
+            <h1 data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out">
+                About Us
+            </h1>
         </div>
 
         <section class="About-content">
-            <div class="aboutImg">
+            <div class="aboutImg" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease">
                 <img src="images\class.jpg" alt="class"></img>
             </div>
 
-            <div>
+            <div data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease">
                 <span class="horizontal-row">
                     <hr id="row">
                     <pre>  About Company
@@ -101,25 +114,24 @@
                 <button type="button" id="Learn" onclick="toggle()">Learn More <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </div>
-            <br><br>
 
         </section>
 
         <section class="About-content">
-            <div>
+            <div data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease">
                 <span class="horizontal-row">
                     <hr id="row">
                     <pre>  Special batches
                     </pre>
                 </span>
-                <h2>Online Learning</h2>
+                <h2 onclick="window.open('courses.html','_self')">Online Learning</h2>
                 <p id="Quote">"No matter where you stay... You can learn our courses sitting at your Home"</p>
-                <p ID="Quote">
+                <p id="Quote">
                     SPECIAL BATCHES FOR USA | CANADA | AUSTRAILIA | NEW ZEALAND | UK
                 </p>
                 <div class="last-about">
                     <i class="fa-solid fa-film fa-2xl"></i>
-                    <div>
+                    <div style="width : 70%">
                         <h3>
                             Details Video tutorial
                         </h3>
@@ -130,7 +142,7 @@
                 </div><br>
                 <div class="last-about">
                     <i class="fa-solid fa-film fa-2xl"></i>
-                    <div>
+                    <div style="width : 70%">
                         <h3>
                             World Class Support
                         </h3>
@@ -139,24 +151,22 @@
                         </p>
                     </div>
                 </div><br>
-                <div class="iconbar-logout"><a href="Courses.html">
-                        <tab>Our courses <i class="fa-solid fa-arrow-right"></i></tab>
-                    </a></div>
             </div>
 
-            <div class="aboutImg2">
+            <div class="aboutImg2" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease">
                 <img src="images/Comp-teach.jpg"></img>
             </div>
 
         </section>
+
     </main>
 
     <footer class="footer">
         <div id="foot1">
             <img src="images/logo2.jpg"></img>
-            <h4 align="center">Shah Academy</h4>
+            <h4>Shah Academy</h4>
             <h3>Follow Us</h3>
-            <div align="left">
+            <div>
                 <a href="https://www.facebook.com/share/1Hm9HTFLxr/" target="_blank"><i class="fa-brands fa-facebook"
                         style="color:rgb(83, 83, 247)"></i></a>
                 <a href="https://x.com/home" target="_blank"><i class="fa-brands fa-twitter" style="color:aqua"></i></a>
@@ -175,7 +185,7 @@
                 <a href="Home.html">Home</a>
             </div>
             <div>
-                <a href="AboutUs.html">About Us</a>
+                <a href="AboutUs.html" style="color:rgb(188, 105, 5);text-decoration: underline;">About Us</a>
             </div>
             <div>
                 <a href="Courses.html">Courses</a>

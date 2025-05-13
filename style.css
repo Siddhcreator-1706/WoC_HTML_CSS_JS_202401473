@@ -1,71 +1,124 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     background: linear-gradient(200deg, rgba(255, 0, 0, 0.751), rgba(255, 153, 0, 0.678));
     color: rgb(0, 0, 0);
-    margin: 0;
     overflow-x: hidden;
     cursor: default;
+    margin-top: 50px;
 }
 
 main {
-    padding-top: 50px;
+    overflow: hidden;
 }
 
 .iconbar {
     background-color: rgb(34, 1, 1);
+    height: 50px;
     display: flex;
     padding: 0;
     padding-bottom: 4px;
     width: 100%;
+    top: 0;
     position: fixed;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
 }
 
-.iconbar ul {
-    display: flex;
-    column-gap: 20px;
-    list-style-type: none;
-    font-style: italic;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 0;
-    font-size: 1.3rem;
-    margin-top: 8px;
-    margin-bottom: auto;
-}
+@media screen and (min-width: 769px) {
 
-.iconbar ul a {
-    color: rgb(254, 214, 250);
-    display: block;
-    text-decoration: none;
-    padding-top: 6px;
-    padding-bottom: 4px;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 8px;
-}
+    #iconbar-tablet {
+        display: flex;
+    }
 
-.iconbar ul a:hover {
-    color: rgb(253, 175, 250);
-    background-color: rgba(122, 121, 121, 0.304);
-    transition: 0.3s ease;
-    box-shadow: 2px 2px 6px rgba(249, 145, 145, 0.409);
-    transform: scale(1.05);
-}
+    #iconbar-tablet ul {
+        display: flex;
+        column-gap: 20px;
+        list-style-type: none;
+        font-style: italic;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 0;
+        font-size: 1.3rem;
+        margin-top: 8px;
+        margin-bottom: auto;
+    }
 
-.iconbar a:active {
-    color: rgb(255, 255, 255);
-    background-color: rgb(92, 92, 92);
-    opacity: 0.4;
+    #iconbar-tablet ul a {
+        color: rgb(254, 214, 250);
+        display: block;
+        text-decoration: none;
+        padding-top: 6px;
+        padding-bottom: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        border-radius: 8px;
+    }
+
+    #iconbar-tablet ul a:hover {
+        color: rgb(253, 175, 250);
+        background-color: rgba(122, 121, 121, 0.304);
+        transition: 0.3s ease;
+        box-shadow: 2px 2px 6px rgba(249, 145, 145, 0.409);
+        transform: scale(1.05);
+    }
+
+    #iconbar-tablet a:active {
+        color: rgb(255, 255, 255);
+        background-color: rgb(92, 92, 92);
+        opacity: 0.4;
+    }
+
+    #Logout {
+        display: none;
+    }
+
+    .Drop:hover .drop-down {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: rgb(255, 255, 255);
+        font-size: 0.8em;
+        align-items: stretch;
+        position: absolute;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 15px;
+        row-gap: 5px;
+    }
+
+    .Drop:hover .drop-down button:hover {
+        color: rgb(88, 29, 29);
+        background-color: #c4b1aa;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+
+    .drop-down button {
+        color: rgb(0, 0, 0);
+        border-color: rgba(0, 0, 0, 0.066);
+        border-style: groove;
+        border-radius: 15px;
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        box-shadow: 2px 2px 10px rgba(6, 6, 6, 0.525);
+        background: none;
+    }
+
+    .drop-down {
+        display: none;
+        padding: 1%;
+    }
+
 }
 
 .iconbar-logout {
     display: flex;
-    font-style: oblique;
+    font-style: italic;
     font-family: 'Courier New', Courier, monospace;
     width: max-content;
     margin-right: 8px;
@@ -75,6 +128,7 @@ main {
 }
 
 .iconbar-logout button {
+    color: #bab7b7;
     border-radius: 8px;
     font-size: 1.4rem;
     padding-top: 4px;
@@ -84,27 +138,10 @@ main {
     background: none;
     border: none;
     cursor: pointer;
-}
-
-.iconbar-logout a {
-    border-radius: 8px;
-    font-size: 1.4rem;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 8px;
-    padding-right: 8px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.iconbar-logout a {
-    color: rgba(223, 219, 219, 0.826);
-    text-decoration: none;
 }
 
 .iconbar-logout:hover {
-    color: rgb(231, 231, 231);
+    color: rgb(201, 195, 195);
     transition: 0.7s;
     box-shadow: 3px 3px 8px rgba(250, 250, 250, 0.712);
     transform: scale(1.075);
@@ -114,6 +151,14 @@ main {
     color: rgb(255, 255, 255);
     background-color: rgb(58, 58, 58);
     opacity: 0.4;
+}
+
+.iconbar-title {
+    display: none;
+}
+
+#bars {
+    display: none;
 }
 
 .icon {
@@ -134,7 +179,7 @@ main {
 
 .footer {
     background-color: rgb(34, 1, 1);
-    height: 350px;
+    height: 300px;
     padding-left: 5%;
     padding-right: 5%;
     width: 100%;
@@ -143,6 +188,10 @@ main {
     justify-content: space-between;
     color: aliceblue;
     line-height: 1.6;
+}
+
+.footer h4 {
+    text-align: center;
 }
 
 .footer i {
@@ -169,10 +218,7 @@ main {
     border-radius: 80%;
     display: flex;
     position: relative;
-    align-items: center;
-    justify-content: center;
-    left: 30%;
-    top: 5%;
+    align-self: center;
     mix-blend-mode: exclusion;
 }
 
@@ -182,21 +228,23 @@ main {
 }
 
 #foot1 {
+    display: flex;
+    flex-direction: column;
     align-content: center;
     width: 25%;
-    column-gap: 5px;
+    row-gap: 5px;
 }
 
 .Title {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
     height: 40vh;
     background-image: linear-gradient(rgba(65, 80, 80, 0.8), rgba(30, 28, 27, 0.744)), url('images/AboutUs.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
-    image-resolution: 100%;
     color: rgb(255, 255, 255);
     transition: all 2s ease;
 }
@@ -205,45 +253,6 @@ main {
     font-size: 3em;
     font-family: AudioWide, 'Times New Roman', Times, serif;
     text-shadow: 5px 0px 5px rgb(0, 0, 0), 0px 5px 15px rgb(74, 72, 72), -5px 0px 5px rgb(0, 0, 0), 0px -5px 15px rgb(62, 60, 60);
-}
-
-.Drop:hover .drop-down {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 10%;
-    background-color: rgb(255, 255, 255);
-    font-size: 0.8em;
-    align-items: stretch;
-    position: absolute;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 15px;
-    row-gap: 5px;
-}
-
-.Drop:hover .drop-down button:hover {
-    color: rgb(88, 29, 29);
-    background-color: #c4b1aa;
-    transition: all 0.5s ease;
-    cursor: pointer;
-}
-
-.drop-down button {
-    color: rgb(0, 0, 0);
-    border-color: rgba(0, 0, 0, 0.066);
-    border-style: groove;
-    border-radius: 15px;
-    display: block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    box-shadow: 2px 2px 10px rgba(6, 6, 6, 0.525);
-    background: none;
-}
-
-.drop-down {
-    display: none;
-    padding: 1%;
 }
 
 #toast {
@@ -261,4 +270,127 @@ main {
     padding-right: 5px;
     padding-top: 5px;
     z-index: 3;
+}
+
+#iconbar-tablet-dropdown {
+    display: none;
+}
+
+
+@media screen and (max-width: 769px) {
+
+    .iconbar-logout {
+        display: none;
+    }
+
+    .iconbar {
+        color: pink;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .iconbar-title {
+        display: flex;
+        align-self: center;
+        text-shadow: 0px 5px 15px rgb(255, 255, 255);
+    }
+
+    #bars {
+        display: flex;
+    }
+
+    #bars:hover {
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        background-color: rgb(92, 92, 92);
+        opacity: 0.4;
+    }
+
+    #iconbar-tablet {
+        display: none;
+    }
+
+    #iconbar-tablet ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        list-style: none;
+        z-index: 1;
+        width: 100%;
+        padding: 0;
+        padding-bottom: 15px;
+        top: 50px;
+        right: 0;
+        background-color: rgb(34, 1, 1, 0.8);
+        backdrop-filter: blur(15px);
+        font-size: 1.2rem;
+        line-height: 3;
+    }
+
+    #iconbar-tablet ul li {
+        width: 100%;
+    }
+
+    #iconbar-tablet ul li a {
+        display: block;
+        color: rgb(254, 214, 250);
+        width: 100%;
+        text-decoration: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 8px;
+        border-radius: 8px;
+        border-bottom: rgba(34, 1, 1, 0) 2px solid;
+        border-top: rgba(34, 1, 1, 0) 2px solid;
+        border: blur(15px);
+    }
+
+    #iconbar-tablet ul li a:hover {
+        cursor: pointer;
+        color: rgb(236, 90, 255);
+        transition: 1s ease;
+        border-bottom: #c4b1aa 2px solid;
+        border-top: #c4b1aa 2px solid;
+    }
+
+    #Logout button {
+        background: linear-gradient(135deg, rgba(160, 10, 95, 0.6), rgba(103, 6, 61, 0.5));
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        height: 100%;
+        width: 100%;
+        color: #f9e8ff;
+        line-height: 3;
+        transition: all 0.4s ease;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(6px);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    }
+
+    #Logout button:hover {
+        background: linear-gradient(180deg, rgba(200, 50, 150, 0.8), rgba(140, 20, 90, 0.7));
+        color: #ffffff;
+        box-shadow: 0 8px 20px rgba(255, 20, 147, 0.4);
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    }
+
+    .drop-down {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .footer {
+        flex-direction: column-reverse;
+        height: max-content;
+        row-gap: 30px;
+    }
+
+    #foot1 {
+        width: 100%;
+        padding-bottom: 5%;
+    }
 }

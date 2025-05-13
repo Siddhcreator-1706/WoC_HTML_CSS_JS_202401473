@@ -27,14 +27,10 @@
 
 .filters {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    column-gap: 20px;
-    align-items: center;
-}
-
-.search-container {
-    width: 45%;
+    row-gap: 10px;
 }
 
 #search-bar {
@@ -46,7 +42,7 @@
 }
 
 .filter-container {
-    text-align: center;
+    color: #0a5440;
 }
 
 .filter-container select {
@@ -97,9 +93,11 @@ button.buy-button:active {
 #title {
     font-size: 1.85em;
     text-align: center;
+    float: center;
     color: rgb(228, 233, 238);
     text-shadow: 2px -2px 8px rgba(255, 255, 255, 0.8);
     font-family: Cursive, 'Times New Roman', Times, serif;
+    margin:10px;
 }
 
 .Enroll {
@@ -143,9 +141,10 @@ button.buy-button:active {
 .Money {
     display: flex;
     flex-direction: column;
+    float: right;
+    row-gap: 10px;
     justify-content: center;
     align-items: center;
-    row-gap: 10px;
 }
 
 .Money button {
@@ -241,3 +240,30 @@ a.Videos {
 a.Videos:active {
     color: #ff0000;
 }
+
+@media screen and (max-width: 768px) {
+    .filters {
+        margin: 20px;
+    }
+
+    .Courses>div {
+        width: 80%;
+    }
+
+    .filter-container {
+        width: 100%;
+    }
+
+    .filter-container select {
+        width: 100%;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    #search-bar {
+        width: 100%;
+    }
+}
+

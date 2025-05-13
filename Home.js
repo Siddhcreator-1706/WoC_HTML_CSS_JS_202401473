@@ -29,8 +29,10 @@ const courses = [
 window.addEventListener('DOMContentLoaded', () => {
     flip();
     dynamicImage();
-    progress('progressValue2', 'progressRing2', 3, 3000, '1');
-    progress('progressValue', 'progressRing', 5, 5000, '2');
+    setTimeout(() => {
+        progress('progressValue2', 'progressRing2', 3, 3000, '1');
+        progress('progressValue', 'progressRing', 5, 5000, '2');
+    },1000);
     messageinitials(mainque, 'Question');
     initializeChatbot();
     document.getElementById('Queryin').addEventListener('keydown', function (e) {

@@ -14,16 +14,16 @@
 </head>
 
 <body>
-    <div class="theme-toggle">
-        <i class="fa-solid fa-moon" id="theme-icon" onclick="toggleTheme()"></i>
-    </div>
-
     <form action="Login.html" class="Login-box" method="get" id="Sign_Up">
+        <div class="theme-toggle">
+            <i class="fa-solid fa-moon" id="theme-icon" onclick="toggleTheme()"></i>
+        </div>
         <h1><span id="typing2"></span></h1>
 
         <div class="Login-content">
             <label for="name">Username</label><br>
-            <input type="text" name="Username" id="name" placeholder="Enter Your Name" minlength="5" maxlength="50" required>
+            <input type="text" name="Username" id="name" placeholder="Enter Your Name" minlength="5" maxlength="50"
+                required>
         </div>
 
         <div class="Login-content">
@@ -33,12 +33,14 @@
 
         <div class="Login-content" id="password">
             <label for="org">Password</label><br>
-            <input type="password" name="password" placeholder="Enter Your Password" size="55" minlength="8" id="org" required>
+            <input type="password" name="password" placeholder="Enter Your Password" size="55" minlength="8" id="org"
+                required>
         </div>
 
         <div class="Login-content" id="password1">
             <label for="veri">Confirm Password</label><br>
-            <input type="password" name='verify' placeholder="Enter Your Password" size="55" minlength="8" id="veri" required>
+            <input type="password" name='verify' placeholder="Enter Your Password" size="55" minlength="8" id="veri"
+                required>
             <button type="button" onclick="togglePassword('veri', 'eye2', 'eyeSlash2')">
                 <i class="fa-regular fa-eye-slash" id="eyeSlash2"></i>
                 <i class="fa-regular fa-eye" id="eye2" style="display: none;"></i>

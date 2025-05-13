@@ -21,42 +21,52 @@
     <script src="javascript.js" defer></script>
 </head>
 
-<body>
+<body onresize="iconbarCloser()">
     <nav class="iconbar">
         <a href="Home.html" target="_parent">
             <img src="images\logo2.jpg" class="icon" alt="Shah Academy">
         </a>
-        <ul>
-            <li>
-                <a href="Home.html">Home</a>
-            </li>
-            <li>
-                <a href="AboutUs.html">About Us</a>
-            </li>
-            <li>
-                <div class="Drop">
-                    <div><a href="Courses.html">Courses</a></div>
-                    <div class="drop-down">
-                        <button onclick="goto('Tally')">TALLY</button>
-                        <button onclick="goto('Content Writing')">Content Writing</button>
-                        <button onclick="goto('SAGE')">SAGE</button>
-                        <button onclick="goto('App Development')">App Development</button>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a href="Review.html">Review</a>
-            </li>
-            <li>
-                <a href="Enquiry.html">Enquiry Us</a>
-            </li>
-        </ul>
+        <h1 class="iconbar-title">
+            SHAH ACADEMY </h1>
+        <div>
+            <i class="fa-solid fa-bars fa-lg" id="bars" onclick="iconbarActive()"></i>
+            <div id="iconbar-tablet">
+                <ul>
+                    <li>
+                        <a href="Home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="AboutUs.html">About Us</a>
+                    </li>
+                    <li>
+                        <div class="Drop">
+                            <div><a href="Courses.html">Courses</a></div>
+                            <div class="drop-down">
+                                <button onclick="goto('Tally')">TALLY</button>
+                                <button onclick="goto('Content Writing')">Content Writing</button>
+                                <button onclick="goto('SAGE')">SAGE</button>
+                                <button onclick="goto('App Development')">App Development</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="Review.html">Review</a>
+                    </li>
+                    <li>
+                        <a href="Enquiry.html">Enquiry Us</a>
+                    </li>
+                    <li id="Logout">
+                        <button type="button" onclick="clearData()">Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <span class="iconbar-logout">
-            <button onclick="clearData()"><a href="Login.html">Logout</a></button>
+            <button type="button" onclick="clearData()">Logout</button>
         </span>
     </nav>
 
-    <main>
+    <main onclick="iconbarCloser()">
         <div class="Title" data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out">
             <h1>Admission & Enquiry</h1>
         </div>
@@ -66,13 +76,14 @@
                 Admission & Enquiry
             </h1>
             <p>
-                The best way to contact us is to use our contact form below. Please fill out all of the required fields
+                The best way to contact us is to use our contact form below. Please fill out all of the required
+                fields
                 and we will get back to you as soon as possible.
             </p><br>
             <form action="Thanks.html" method="get">
                 <label>Full Name</label>
                 <input type="text" required></input>
-                <div>
+                <div id="insideEnquiry">
                     <div>
                         <label>Phone Number</label>
                         <input type="tel" required></input>
@@ -123,7 +134,7 @@
                 <a href="Review.html">Review</a>
             </div>
             <div>
-                <a href="Enquiry.html">Enquiry Us</a>
+                <a href="Enquiry.html" style="color:rgb(188, 105, 5);text-decoration: underline;">Enquiry Us</a>
             </div>
         </div>
         <div>

@@ -20,42 +20,53 @@
     <script src="javascript.js" defer></script>
 </head>
 
-<body>
+<body onresize="iconbarCloser()">
     <nav class="iconbar">
         <a href="Home.html" target="_parent">
             <img src="images\logo2.jpg" class="icon" alt="Shah Academy">
         </a>
-        <ul>
-            <li>
-                <a href="Home.html">Home</a>
-            </li>
-            <li>
-                <a href="AboutUs.html">About Us</a>
-            </li>
-            <li>
-                <div class="Drop">
-                    <div><a href="Courses.html">Courses</a></div>
-                    <div class="drop-down">
-                        <button onclick="goto('Tally')">TALLY</button>
-                        <button onclick="goto('Content Writing')">Content Writing</button>
-                        <button onclick="goto('SAGE')">SAGE</button>
-                        <button onclick="goto('App Development')">App Development</button>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <a href="Review.html">Review</a>
-            </li>
-            <li>
-                <a href="Enquiry.html">Enquiry Us</a>
-            </li>
-        </ul>
+        <h1 class="iconbar-title">
+            SHAH ACADEMY </h1>
+        <div>
+            <i class="fa-solid fa-bars fa-lg" id="bars" onclick="iconbarActive()"></i>
+            <div id="iconbar-tablet">
+                <ul>
+                    <li>
+                        <a href="Home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="AboutUs.html">About Us</a>
+                    </li>
+                    <li>
+                        <div class="Drop">
+                            <div><a href="Courses.html">Courses</a></div>
+                            <div class="drop-down">
+                                <button onclick="goto('Tally')">TALLY</button>
+                                <button onclick="goto('Content Writing')">Content Writing</button>
+                                <button onclick="goto('SAGE')">SAGE</button>
+                                <button onclick="goto('App Development')">App Development</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="Review.html">Review</a>
+                    </li>
+                    <li>
+                        <a href="Enquiry.html">Enquiry Us</a>
+                    </li>
+                    <li id="Logout">
+                        <button type="button" onclick="clearData()">Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <span class="iconbar-logout">
-            <button onclick="clearData()"><a href="Login.html">Logout</a></button>
+            <button type="button" onclick="clearData()">Logout</button>
         </span>
+
     </nav>
 
-    <main>
+    <main onclick="iconbarCloser()">
         <div class="Title">
             <h1>Admission & Enquiry</h1>
         </div>
