@@ -13,6 +13,7 @@ This project is a part of WoC 7.0 , a project to create a portal for educational
 ### 🏠 Home Page
 - Features **dynamic rotating images** and **animated designs** to captivate users.
 - Engaging interface with color themes and transitions.
+- Dynamic well designed Progress-bar.
 - Smart chatbot helps users understand course details. Generates natural responses and interacts like a virtual assistant.
 
 ### ℹ️ About Us Page
@@ -64,10 +65,10 @@ Here’s what’s planned to evolve the portal further:
 
 - 🗄️ **Backend Integration** – Node.js and MongoDB for real database support.
 - 🔐 **Advanced Auth** – Email verification and password encryption.
-- 📱 **Responsive Design** – Optimized for mobile, tablet, and large displays.
+- 📱 **Enhanced UI/UX** – Improve colour-combination and user experience.
 - 🛠️ **Admin Dashboard** – Manage reviews, users, and course content.
-- 🧾 **Course Tracking** – Completion status and downloadable certificates.
-- ☁️ **Cloud Deployment** – Public hosting via GitHub Pages, Vercel, or Netlify.
+- 🧾 **Course Tracking** – Completion status along with downloadable certificates.
+- ☁️ **Cloud Deployment** – Public hosting via Vercel, or Netlify.
 
 ---
 
