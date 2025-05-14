@@ -1,4 +1,4 @@
-const mainque = "Hi! Hope you're doing well😊. Tell me the course name and I can help you with important information about that course. Here is the list of available courses:<br>- Tally<br>- XERO<br>- MYOB<br>- QBOOKS<br>- SAGE<br>- Python Programming<br>- Data Science Fundamentals<br>- Web Development Bootcamp<br>- Graphic Design<br>- Mobile App Development<br>- Cybersecurity Essentials<br>- Cloud Computing<br>- Artificial Intelligence<br>- Blockchain Technology<br>- UI/UX Design<br>- Digital Photography<br>- Content Writing<br>- Video Editing<br>- Quant Computing<br><br>Which course would you like information about🤔?<br>Write 'Question' to get list again.<br>Click 'Clear' to restart the chat from beginning.";
+const mainque = "Hi! Hope you're doing well😊. Tell me the course name and I can help you with important information about that course. Here is the list of available courses:<br>- Tally<br>- XERO<br>- MYOB<br>- QBOOKS<br>- SAGE<br>- Python Programming<br>- Data Science Fundamentals<br>- Web Development Bootcamp<br>- Graphic Design<br>- Mobile App Development<br>- Cybersecurity Essentials<br>- Cloud Computing<br>- Artificial Intelligence<br>- Blockchain Technology<br>- UI/UX Design<br>- Digital Marketing<br>- Content Writing<br>- Video Editing<br>- Quant Computing<br><br>Which course would you like information about🤔?<br>Write 'Question' to get list again.<br>Click 'Clear' to restart the chat from beginning.";
 
 const mainres = 'The course you are looking for is not available😞. Please check the list of courses.';
 
@@ -20,7 +20,7 @@ const courses = [
     { name: 'Artificial Intelligence', cost: '1000', time: 8, contact: '+91 98765 43222' },
     { name: 'Blockchain Technology', cost: '1100', time: 7, contact: '+91 98765 43223' },
     { name: 'UI/UX Design', cost: '700', time: 5, contact: '+91 98765 43224' },
-    { name: 'Digital Photography', cost: '550', time: 4, contact: '+91 98765 43225' },
+    { name: 'Digital Marketing', cost: '550', time: 4, contact: '+91 98765 43225' },
     { name: 'Content Writing', cost: '400', time: 3, contact: '+91 98765 43226' },
     { name: 'Video Editing', cost: '650', time: 6, contact: '+91 98765 43227' },
     { name: 'Quant Computing', cost: '0', time: 4, contact: '+91 98765 43228' }
@@ -136,9 +136,10 @@ function chaton() {
     const chatbot = document.getElementById('chatbot');
     chatbot.style.display = 'flex';
     background.style.display = 'flex';
-    document.querySelector('body').style.overflow = 'hidden';
     document.querySelector('.chatinterface').scrollTo(0, document.querySelector('.chatinterface').scrollHeight);
     document.getElementById('Queryin').focus();
+    document.querySelector('body').style.overflowY = 'hidden';
+    console.log(document.querySelector('body').style.overflowY);
 }
 
 function chatoff() {
@@ -164,10 +165,13 @@ function message(msg, messenger) {
 
 function Send() {
     const mess = document.getElementById('Queryin').value;
+    if( mess === '') {
+        alert('Please enter a message');
+        return;
+    }
     document.getElementById('Queryin').value = '';
     message(mess, 'Answer');
     reply(mess.toLowerCase());
-    document.getElementById('Queryin').focus();
 }
 
 function reply(ans) {
@@ -236,7 +240,6 @@ function submitAns(msg) {
     document.getElementById('Clear').style.pointerEvents = 'auto';
     document.getElementById('revert').style.pointerEvents = 'auto';
     document.querySelector('.chatinterface').scrollTo(0, document.querySelector('.chatinterface').scrollHeight);
-    document.getElementById('Queryin').focus();
 }
 
 function initializeChatbot() {

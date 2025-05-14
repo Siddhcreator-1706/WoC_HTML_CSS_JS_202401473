@@ -110,7 +110,7 @@ body a {
 .theme-toggle {
     position: absolute;
     top: 20px;
-    right: 30px;
+    right: 20px;
     z-index: 2;
     cursor: pointer;
 }
@@ -150,7 +150,7 @@ body.light a {
 
 @media screen and (max-width: 468px) {
     .Login-box {
-        width: 260px;
+        width: 280px;
         padding: 20px;
     }
 

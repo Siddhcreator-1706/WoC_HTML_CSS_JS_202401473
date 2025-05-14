@@ -134,6 +134,10 @@ function AddMoney() {
         return;
     }
     let value = parseInt(UserData.Coins);
+    if (money + value > 5000) {
+        alert("You cannot have more than 5000 coins");
+        return;
+    }
     UserData.Coins = value + money;
     localStorage.setItem("user_" + username, JSON.stringify(UserData));
     updateCoin();
