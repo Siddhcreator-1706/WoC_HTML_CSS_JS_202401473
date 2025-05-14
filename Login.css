@@ -150,7 +150,13 @@ body.light a {
 
 @media screen and (max-width: 468px) {
     .Login-box {
-        width: 280px;
+        width: 260px;
         padding: 20px;
+    }
+
+    body {
+        background: linear-gradient(135deg, #88c2e7, #bc59de, #4d79e0),
+            linear-gradient(185deg, #5ebd91, #a8b9dc, #b7ff00),
+            linear-gradient(225deg, #badeff, #0751ffd4, #0fd8e6);
     }
 }

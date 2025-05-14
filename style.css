@@ -29,93 +29,6 @@ main {
     z-index: 1;
 }
 
-@media screen and (min-width: 769px) {
-
-    #iconbar-tablet {
-        display: flex;
-    }
-
-    #iconbar-tablet ul {
-        display: flex;
-        column-gap: 20px;
-        list-style-type: none;
-        font-style: italic;
-        font-family: 'Courier New', Courier, monospace;
-        padding: 0;
-        font-size: 1.3rem;
-        margin-top: 8px;
-        margin-bottom: auto;
-    }
-
-    #iconbar-tablet ul a {
-        color: rgb(254, 214, 250);
-        display: block;
-        text-decoration: none;
-        padding-top: 6px;
-        padding-bottom: 4px;
-        padding-left: 8px;
-        padding-right: 8px;
-        border-radius: 8px;
-    }
-
-    #iconbar-tablet ul a:hover {
-        color: rgb(253, 175, 250);
-        background-color: rgba(122, 121, 121, 0.304);
-        transition: 0.3s ease;
-        box-shadow: 2px 2px 6px rgba(249, 145, 145, 0.409);
-        transform: scale(1.05);
-    }
-
-    #iconbar-tablet a:active {
-        color: rgb(255, 255, 255);
-        background-color: rgb(92, 92, 92);
-        opacity: 0.4;
-    }
-
-    #Logout {
-        display: none;
-    }
-
-    .Drop:hover .drop-down {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        background-color: rgb(255, 255, 255);
-        font-size: 0.8em;
-        align-items: stretch;
-        position: absolute;
-        padding-left: 5px;
-        padding-right: 5px;
-        border-radius: 15px;
-        row-gap: 5px;
-    }
-
-    .Drop:hover .drop-down button:hover {
-        color: rgb(88, 29, 29);
-        background-color: #c4b1aa;
-        transition: all 0.5s ease;
-        cursor: pointer;
-    }
-
-    .drop-down button {
-        color: rgb(0, 0, 0);
-        border-color: rgba(0, 0, 0, 0.066);
-        border-style: groove;
-        border-radius: 15px;
-        display: block;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        box-shadow: 2px 2px 10px rgba(6, 6, 6, 0.525);
-        background: none;
-    }
-
-    .drop-down {
-        display: none;
-        padding: 1%;
-    }
-
-}
-
 .iconbar-logout {
     display: flex;
     font-style: italic;
@@ -276,6 +189,92 @@ main {
     display: none;
 }
 
+@media screen and (min-width: 769px) {
+
+    #iconbar-tablet {
+        display: flex;
+    }
+
+    #iconbar-tablet ul {
+        display: flex;
+        column-gap: 20px;
+        list-style-type: none;
+        font-style: italic;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 0;
+        font-size: 1.3rem;
+        margin-top: 8px;
+        margin-bottom: auto;
+    }
+
+    #iconbar-tablet ul a {
+        color: rgb(254, 214, 250);
+        display: block;
+        text-decoration: none;
+        padding-top: 6px;
+        padding-bottom: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        border-radius: 8px;
+    }
+
+    #iconbar-tablet ul a:hover {
+        color: rgb(253, 175, 250);
+        background-color: rgba(122, 121, 121, 0.304);
+        transition: 0.3s ease;
+        box-shadow: 2px 2px 6px rgba(249, 145, 145, 0.409);
+        transform: scale(1.05);
+    }
+
+    #iconbar-tablet a:active {
+        color: rgb(255, 255, 255);
+        background-color: rgb(92, 92, 92);
+        opacity: 0.4;
+    }
+
+    #Logout {
+        display: none;
+    }
+
+    .Drop:hover .drop-down {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: rgb(255, 255, 255);
+        font-size: 0.8em;
+        align-items: stretch;
+        position: absolute;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 15px;
+        row-gap: 5px;
+    }
+
+    .Drop:hover .drop-down button:hover {
+        color: rgb(88, 29, 29);
+        background-color: #c4b1aa;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+
+    .drop-down button {
+        color: rgb(0, 0, 0);
+        border-color: rgba(0, 0, 0, 0.066);
+        border-style: groove;
+        border-radius: 15px;
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        box-shadow: 2px 2px 10px rgba(6, 6, 6, 0.525);
+        background: none;
+    }
+
+    .drop-down {
+        display: none;
+        padding: 1%;
+    }
+
+}
 
 @media screen and (max-width: 769px) {
 
@@ -392,5 +391,12 @@ main {
     #foot1 {
         width: 100%;
         padding-bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .iconbar-title {
+        font-size: 1.2rem;
+        text-align: center;
     }
 }

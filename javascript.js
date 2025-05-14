@@ -30,13 +30,18 @@ function iconbarActive() {
     }
 }
 
-function iconbarCloser(){
-    if(window.innerWidth <= 768){
+function iconbarCloser() {
+    if (window.innerWidth <= 768) {
         document.getElementById('iconbar-tablet').style.display = 'none';
         document.querySelector('body').style.overflowY = 'auto';
     }
-    if(window.innerWidth > 768){
-        console.log('else');
+    else if (document.querySelector(".PopUp") || document.querySelector(".PopUpCourse")) {
+        if (document.querySelector(".PopUpCourse").style.display !== 'flex' && document.querySelector(".PopUp").style.display !== 'flex') {
+            document.getElementById('iconbar-tablet').style.display = 'block';
+            document.querySelector('body').style.overflowY = 'auto';
+        }
+    }
+    else if (window.innerWidth > 768) {
         document.getElementById('iconbar-tablet').style.display = 'block';
         document.querySelector('body').style.overflowY = 'auto';
     }

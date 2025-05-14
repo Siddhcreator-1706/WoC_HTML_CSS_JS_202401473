@@ -155,4 +155,9 @@
         width: 90%;
         height: 90%;
     }
+
+    #Learn:hover {
+        transform: scale(1);
+        cursor: pointer;
+    }
 }

@@ -454,6 +454,21 @@ body {
     .flipper {
         min-width: 170px;
     }
+
+    #Clear:hover {
+        background-color: grey;
+        transform: scale(1);
+    }
+
+    #Send:hover {
+        background-color: red;
+        transform: scale(1);
+    }
+
+    .buttons button:hover {
+        transform: scale(1);
+        transition: all 0.2s ease;
+    }
 }
 
 @media screen and (max-width: 520px) {
@@ -487,5 +502,26 @@ body {
     .home-content {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #chatbot {
+        height: 420px;
+        width: 90%;
+        right: 10px;
+        bottom: 10px;
+    }
+    #Send{
+        padding: 2px;
+    }
+    #Clear {
+        padding: 2px;
+    }
+}
+
+@media screen and (max-width: 260px) {
+    .head{
+        font-size: 1.2rem;
     }
 }

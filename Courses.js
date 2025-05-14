@@ -142,12 +142,12 @@ function AddMoney() {
 
 function PopUp() {
     document.querySelector(".PopUp").style.display = 'flex';
-    document.querySelector('body').style.overflow = 'hidden';
+    document.querySelector('body').style.overflowY = 'hidden';
 }
 
 function ClosePop() {
     document.querySelector(".PopUp").style.display = 'none';
-    document.querySelector('body').style.overflow = 'scroll';
+    document.querySelector('body').style.overflowY = 'auto';
 }
 
 function getCourseVideos(courseName) {
@@ -575,6 +575,7 @@ function checkboxes(checkbox, courseName) {
 
 function PopUpCourse(button) {
     document.querySelector(".PopUpCourse").style.display = 'flex';
+    document.querySelector('body').style.overflowY = 'hidden';
     const pop = document.querySelector('.PopUpCourse .Course');
     pop.innerHTML = `<button type="button" onclick="ClosePopCourse()">Back to Courses</button>
                 <div class="Progress"></div>
@@ -667,5 +668,5 @@ function ResetCourse(courseName) {
 
 function ClosePopCourse() {
     document.querySelector(".PopUpCourse").style.display = 'none';
-    document.querySelector('body').style.overflow = 'scroll';
+    document.querySelector('body').style.overflowY = 'auto';
 }
