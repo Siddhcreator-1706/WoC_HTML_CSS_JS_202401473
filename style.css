@@ -82,6 +82,9 @@ main {
     margin-bottom: 3px;
     padding: 2px 2px;
     border-radius: 90%;
+}
+
+nav .icon {
     mix-blend-mode: exclusion;
 }
 

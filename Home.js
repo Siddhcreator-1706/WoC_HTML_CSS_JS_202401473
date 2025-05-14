@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         progress('progressValue2', 'progressRing2', 3, 3000, '1');
         progress('progressValue', 'progressRing', 5, 5000, '2');
-    },1000);
+    }, 1000);
     messageinitials(mainque, 'Question');
     initializeChatbot();
     document.getElementById('Queryin').addEventListener('keydown', function (e) {
@@ -138,6 +138,7 @@ function chaton() {
     background.style.display = 'flex';
     document.querySelector('body').style.overflow = 'hidden';
     document.querySelector('.chatinterface').scrollTo(0, document.querySelector('.chatinterface').scrollHeight);
+    document.getElementById('Queryin').focus();
 }
 
 function chatoff() {
@@ -166,6 +167,7 @@ function Send() {
     document.getElementById('Queryin').value = '';
     message(mess, 'Answer');
     reply(mess.toLowerCase());
+    document.getElementById('Queryin').focus();
 }
 
 function reply(ans) {
@@ -192,6 +194,8 @@ function reply(ans) {
                 document.getElementById('Queryin').style.pointerEvents = 'none';
                 document.getElementById('Send').style.pointerEvents = 'none';
                 document.getElementById('Clear').style.pointerEvents = 'none';
+                document.getElementById('revert').style.pointerEvents = 'none';
+                document.getElementById('Yes').focus();
                 document.querySelector('.chatinterface').scrollTo(0, document.querySelector('.chatinterface').scrollHeight);
             }, 1000);
             return;
@@ -230,7 +234,9 @@ function submitAns(msg) {
     document.getElementById('Queryin').style.pointerEvents = 'auto';
     document.getElementById('Send').style.pointerEvents = 'auto';
     document.getElementById('Clear').style.pointerEvents = 'auto';
+    document.getElementById('revert').style.pointerEvents = 'auto';
     document.querySelector('.chatinterface').scrollTo(0, document.querySelector('.chatinterface').scrollHeight);
+    document.getElementById('Queryin').focus();
 }
 
 function initializeChatbot() {
@@ -259,4 +265,5 @@ function Clear() {
     setTimeout(() => {
         messageinitials(mainque, 'Question');
     }, 1000);
+    document.getElementById('Queryin').focus();
 }

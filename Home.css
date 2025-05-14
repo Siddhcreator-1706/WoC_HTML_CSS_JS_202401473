@@ -421,6 +421,7 @@ body {
 
 #dynamicImage {
     max-height: 300px;
+    display: flex  ;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 45%;
