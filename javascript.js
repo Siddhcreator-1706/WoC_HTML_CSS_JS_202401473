@@ -47,5 +47,8 @@ function iconbarCloser() {
     }
 }
 
+window.addEventListener('resize', function () {
+    iconbarCloser();
+});
 
 AOS.init();
